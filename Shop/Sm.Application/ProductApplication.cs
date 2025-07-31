@@ -46,7 +46,7 @@ namespace Sm.Application
                 return operation.Failed(ApplicationMessages.Duplicate);
 
             var slug = command.Slug.Slugify();
-            
+
             product.Edit(command.Name, command.Code,
                 command.UnitPrice, command.ShortDescription,
                 command.Description, command.Picture, command.PictureAlt,
@@ -68,11 +68,11 @@ namespace Sm.Application
         public OperationResult InStock(long id)
         {
             var operation = new OperationResult();
-            
+
             var product = _productRepository.Get(id);
             if (product == null)
                 return operation.Failed(ApplicationMessages.NotFound);
-            
+
             product.InStock();
             _productRepository.SaveChanges();
             return operation.Succedded();
@@ -81,13 +81,14 @@ namespace Sm.Application
         public OperationResult NotInStock(long id)
         {
             var operation = new OperationResult();
-            
+
             var product = _productRepository.Get(id);
             if (product == null)
                 return operation.Failed(ApplicationMessages.NotFound);
-            
+
             product.NotInStock();
             _productRepository.SaveChanges();
-            return operation.Succedded();        }
+            return operation.Succedded();
+        }
     }
 }

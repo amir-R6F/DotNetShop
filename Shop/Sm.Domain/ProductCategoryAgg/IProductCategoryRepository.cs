@@ -10,5 +10,7 @@ namespace Sm.Domain.ProductCategoryAgg
     {
         EditProductCategory GetDetails(long id);
         List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchModel);
+
+        List<ProductCategoryViewModel> GetCategories();
     }
 }

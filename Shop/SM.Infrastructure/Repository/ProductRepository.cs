@@ -46,7 +46,8 @@ namespace SM.Infrastructure.Repository
                     Code = x.Code,
                     Picture = x.Picture,
                     UnitPrice = x.UnitPrice,
-                    CategoryId = x.CategoryId
+                    CategoryId = x.CategoryId,
+                    CreationDate = x.CreationDate.ToString()
                 });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))
