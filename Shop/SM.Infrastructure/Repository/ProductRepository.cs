@@ -20,6 +20,7 @@ namespace SM.Infrastructure.Repository
         {
             return _context.Products.Select(x => new EditProduct
             {
+                Id = x.Id,
                 Name = x.Name,
                 Code = x.Code,
                 Slug = x.Slug,
@@ -31,7 +32,8 @@ namespace SM.Infrastructure.Repository
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
                 ShortDescription = x.ShortDescription,
-                UnitPrice = x.UnitPrice
+                UnitPrice = x.UnitPrice,
+                
             }).FirstOrDefault(x => x.Id == id);
         }
 
@@ -47,7 +49,8 @@ namespace SM.Infrastructure.Repository
                     Picture = x.Picture,
                     UnitPrice = x.UnitPrice,
                     CategoryId = x.CategoryId,
-                    CreationDate = x.CreationDate.ToString()
+                    CreationDate = x.CreationDate.ToString(),
+                    IsInStock = x.IsInStock
                 });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))

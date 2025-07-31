@@ -70,19 +70,28 @@
                             @foreach(var product in Model.products)
                             {
                                 <tr>
-                                    <td>product.Id</td>
+                                    <td>@product.Id</td>
                                     <td>
-                                        <img src="~/ProductPictures/product.Picture" style="height: 70px; width: 70px;"/>
+                                        <img src="~/ProductPictures/@product.Picture" style="height: 70px; width: 70px;"/>
                                     </td>
-                                    <td>product.Name</td>
-                                    <td>product.Code</td>
-                                    <td>product.Category</td>
-                                    <td>product.CreationDate</td>
+                                    <td>@product.Name</td>
+                                    <td>@product.Code</td>
+                                    <td>@product.Category</td>
+                                    <td>@product.CreationDate</td>
                                     <td>
                                         <a class="btn btn-warning waves-effect waves-light m-b-5"
-                                           href="#">
+                                           href="#showmodal=@Url.Page("./index", "Edit", new {Id = product.Id})">
                                             <i class="fa fa-edit"></i> ویرایش
                                         </a>
+                                        @if (product.IsInStock)
+                                        {
+                                            <a class="btn btn-danger btn-sm waves-effect waves-light" asp-page="./index" asp-page-handler="NotInStock" asp-route-id="@product.Id">ناموجود شود</a>                                            
+                                        }
+                                        else
+                                        {
+                                            <a class="btn btn-success btn-sm waves-effect waves-light" asp-page="./index" asp-page-handler="InStock" asp-route-id="@product.Id">موجود شود</a>
+                                        }
+                                        
                                     </td>
                                 </tr>
                             }
