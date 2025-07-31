@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Sm.Domain.ProductCategoryAgg;
+using Sm.Domain.ProductAgg;
 
 namespace SM.Infrastructure.Mapping
 {
-    public class ProductCategoryMapping : IEntityTypeConfiguration<ProductCategory>
+    public class ProductMapping :IEntityTypeConfiguration<Product>
     {
-        public void Configure(EntityTypeBuilder<ProductCategory> builder)
+        public void Configure(EntityTypeBuilder<Product> builder)
         {
-            builder.ToTable("ProductCategories");
+            builder.ToTable("products");
             builder.HasKey(x => x.Id);
             
             builder.Property(x => x.Name).HasMaxLength(255).IsRequired();
@@ -20,10 +20,9 @@ namespace SM.Infrastructure.Mapping
             builder.Property(x => x.MetaDescription).HasMaxLength(150).IsRequired();
             builder.Property(x => x.Slug).HasMaxLength(300).IsRequired();
 
-            builder.HasMany(x => x.Products)
-                .WithOne(x => x.Category)
+            builder.HasOne(x => x.Category)
+                .WithMany(x => x.Products)
                 .HasForeignKey(x => x.CategoryId);
-
         }
     }
 }
