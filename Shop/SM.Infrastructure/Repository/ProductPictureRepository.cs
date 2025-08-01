@@ -39,7 +39,8 @@ namespace SM.Infrastructure.Repository
                 Picture = x.Picture,
                 Product = x.Product.Name,
                 CreationDate = x.CreationDate.ToString(),
-                ProductId = x.ProductId
+                ProductId = x.ProductId,
+                IsRemoved = x.IsRemoved
                 
             });
 

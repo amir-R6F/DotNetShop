@@ -90,5 +90,10 @@ namespace Sm.Application
             _productRepository.SaveChanges();
             return operation.Succedded();
         }
+
+        public List<ProductViewModel> GetProducts()
+        {
+            return _productRepository.GetProducts();
+        }
     }
 }
