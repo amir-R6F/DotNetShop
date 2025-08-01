@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using Shop.Domain;
 using Sm.Domain.ProductCategoryAgg;
+using Sm.Domain.ProductPictureAgg;
 
 namespace Sm.Domain.ProductAgg
 {
@@ -33,6 +35,7 @@ namespace Sm.Domain.ProductAgg
         public string MetaDescription { get; private set; }
 
         public ProductCategory Category { get; private set; }
+        public List<ProductPicture> ProductPictures { get; private set; }
 
         public Product(string name, string code, double unitPrice, string shortDescription,
             string description, string picture, string pictureAlt, string pictureTitle, long categoryId, string slug,
@@ -50,7 +53,8 @@ namespace Sm.Domain.ProductAgg
             Slug = slug;
             Keywords = keywords;
             MetaDescription = metaDescription;
-            
+            ProductPictures = new List<ProductPicture>();
+
         }
         
         public void Edit(string name, string code, double unitPrice, string shortDescription,
