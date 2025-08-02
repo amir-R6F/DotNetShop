@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Sm.Domain.ProductAgg;
 using Sm.Domain.ProductCategoryAgg;
 using Sm.Domain.ProductPictureAgg;
+using Sm.Domain.SliderAgg;
 using SM.Infrastructure.Mapping;
 
 namespace SM.Infrastructure
@@ -11,9 +12,10 @@ namespace SM.Infrastructure
     {
         public DbSet<ProductCategory> ProductCategories { get; set; }
         public DbSet<Product> Products { get; set; }
-        
+
         public DbSet<ProductPicture> ProductPictures { get; set; }
 
+        public DbSet<Slider> Sliders { get; set; }
 
         public SmContext(DbContextOptions options) : base(options)
         {

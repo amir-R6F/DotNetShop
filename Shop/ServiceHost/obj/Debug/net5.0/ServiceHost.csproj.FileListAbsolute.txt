@@ -94,3 +94,7 @@ E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administr
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\ProductsPicture\Create.cshtml.g.cs
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\ProductsPicture\Edit.cshtml.g.cs
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\ProductsPicture\Index.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Sliders\Create.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Sliders\Edit.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Sliders\Index.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shared\_Menu.cshtml.g.cs
