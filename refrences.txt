@@ -1,0 +1,14 @@
+dotnet add package Microsoft.EntityFrameworkCore --version 5.0.17
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer --version 5.0.17
+dotnet add package Microsoft.EntityFrameworkCore.Tools --version 5.0.17
+dotnet add package Microsoft.EntityFrameworkCore.Design --version 5.0.17
+
+=====
+dotnet ef migrations add AddCustomerDiscountFromDM --project dm.Infrastructure --startup-project servicehost
+dotnet ef database update --startup-project servicehost
+
+=====
+
+dotnet ef migrations add AddCustomerDiscountFromDM  --project dm.Infrastructure  --startup-project servicehost  --context DiscountContext
+dotnet ef database update  --startup-project servicehost  --project dm.Infrastructure  --context DiscountContext
+
