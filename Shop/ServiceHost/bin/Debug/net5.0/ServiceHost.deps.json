@@ -35,6 +35,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "5.0.17",
           "SM.Infrastructure": "1.0.0",
+          "ShopQuery": "1.0.0",
+          "Sm.Configuration": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "5.0.0.0",
@@ -1318,6 +1320,17 @@
           "Framework.dll": {}
         }
       },
+      "ShopQuery/1.0.0": {
+        "dependencies": {
+          "SM.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "ShopQuery.dll": {}
+        },
+        "compile": {
+          "ShopQuery.dll": {}
+        }
+      },
       "Sm.Application/1.0.0": {
         "dependencies": {
           "Sm.Application.Contracts": "1.0.0",
@@ -1339,6 +1352,20 @@
         },
         "compile": {
           "Sm.Application.Contracts.dll": {}
+        }
+      },
+      "Sm.Configuration/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
+          "SM.Infrastructure": "1.0.0",
+          "ShopQuery": "1.0.0",
+          "Sm.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Sm.Configuration.dll": {}
+        },
+        "compile": {
+          "Sm.Configuration.dll": {}
         }
       },
       "Sm.Domain/1.0.0": {
@@ -3738,12 +3765,22 @@
       "serviceable": false,
       "sha512": ""
     },
+    "ShopQuery/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Sm.Application/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "Sm.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sm.Configuration/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

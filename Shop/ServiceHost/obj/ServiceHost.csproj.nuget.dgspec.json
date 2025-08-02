@@ -84,6 +84,12 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj"
+              },
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Configuration\\Sm.Configuration.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Configuration\\Sm.Configuration.csproj"
+              },
               "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj": {
                 "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj"
               }
@@ -121,6 +127,62 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj",
+        "projectName": "ShopQuery",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj",
+        "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -225,6 +287,74 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Configuration\\Sm.Configuration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Configuration\\Sm.Configuration.csproj",
+        "projectName": "Sm.Configuration",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Configuration\\Sm.Configuration.csproj",
+        "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Configuration\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj"
+              },
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Domain\\Sm.Domain.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Domain\\Sm.Domain.csproj"
+              },
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

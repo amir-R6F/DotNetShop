@@ -1521,6 +1521,19 @@
           "bin/placeholder/Framework.dll": {}
         }
       },
+      "ShopQuery/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "SM.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ShopQuery.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ShopQuery.dll": {}
+        }
+      },
       "Sm.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -1546,6 +1559,22 @@
         },
         "runtime": {
           "bin/placeholder/Sm.Application.Contracts.dll": {}
+        }
+      },
+      "Sm.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
+          "SM.Infrastructure": "1.0.0",
+          "ShopQuery": "1.0.0",
+          "Sm.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sm.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sm.Configuration.dll": {}
         }
       },
       "Sm.Domain/1.0.0": {
@@ -5827,6 +5856,11 @@
       "path": "../Framework/Framework.csproj",
       "msbuildProject": "../Framework/Framework.csproj"
     },
+    "ShopQuery/1.0.0": {
+      "type": "project",
+      "path": "../ShopQuery/ShopQuery.csproj",
+      "msbuildProject": "../ShopQuery/ShopQuery.csproj"
+    },
     "Sm.Application/1.0.0": {
       "type": "project",
       "path": "../Sm.Application/Sm.Application.csproj",
@@ -5836,6 +5870,11 @@
       "type": "project",
       "path": "../Sm.Application.Contracts/Sm.Application.Contracts.csproj",
       "msbuildProject": "../Sm.Application.Contracts/Sm.Application.Contracts.csproj"
+    },
+    "Sm.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../Sm.Configuration/Sm.Configuration.csproj",
+      "msbuildProject": "../Sm.Configuration/Sm.Configuration.csproj"
     },
     "Sm.Domain/1.0.0": {
       "type": "project",
@@ -5851,7 +5890,9 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Microsoft.EntityFrameworkCore.Design >= 5.0.17",
-      "SM.Infrastructure >= 1.0.0"
+      "SM.Infrastructure >= 1.0.0",
+      "ShopQuery >= 1.0.0",
+      "Sm.Configuration >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5879,6 +5920,12 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj": {
+              "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj"
+            },
+            "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Configuration\\Sm.Configuration.csproj": {
+              "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Configuration\\Sm.Configuration.csproj"
+            },
             "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj": {
               "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj"
             }

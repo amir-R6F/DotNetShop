@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Sm.Configuration;
 using SM.Infrastructure;
 
 namespace ServiceHost
@@ -26,7 +27,7 @@ namespace ServiceHost
         {
             var Connectionstring = Configuration.GetConnectionString("LampShop");
             
-            SmBootstrapper.configuration(services, Connectionstring);
+            Bootstrapper.configuration(services, Connectionstring);
             
             services.AddRazorPages();
         }
