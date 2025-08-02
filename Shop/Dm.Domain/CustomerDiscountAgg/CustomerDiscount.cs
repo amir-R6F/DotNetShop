@@ -11,11 +11,11 @@ namespace Dm.Domain.CustomerDiscountAgg
         public DateTime StartDate { get; private set; }
         public DateTime EndDate { get; private set; }
         public bool IsActive { get; private set; }
-        public bool Reason { get; private set; }
+        public string Reason { get; private set; }
         
         // public Product Product { get; private set; }
         
-        public CustomerDiscount(long productId, int discountRate, DateTime startDate, DateTime endDate, bool reason)
+        public CustomerDiscount(long productId, int discountRate, DateTime startDate, DateTime endDate, string reason)
         {
             ProductId = productId;
             DiscountRate = discountRate;
@@ -25,7 +25,7 @@ namespace Dm.Domain.CustomerDiscountAgg
             Reason = reason;
         }
         
-        public void Edit(long productId, int discountRate, DateTime startDate, DateTime endDate, bool reason)
+        public void Edit(long productId, int discountRate, DateTime startDate, DateTime endDate, string reason)
         {
             ProductId = productId;
             DiscountRate = discountRate;

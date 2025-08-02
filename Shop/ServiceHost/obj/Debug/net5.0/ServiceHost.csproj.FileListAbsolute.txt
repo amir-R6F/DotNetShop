@@ -104,3 +104,13 @@ E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\ref\ServiceHost.dll
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\ServiceHost.pdb
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\ServiceHost.genruntimeconfig.cache
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\productCategory\Default.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\shop\servicehost\bin\Debug\net5.0\Dm.Application.Contracts.dll
+E:\1_PROJECTS\DotNetShop\shop\servicehost\bin\Debug\net5.0\Dm.Application.dll
+E:\1_PROJECTS\DotNetShop\shop\servicehost\bin\Debug\net5.0\Dm.Configuration.dll
+E:\1_PROJECTS\DotNetShop\shop\servicehost\bin\Debug\net5.0\Dm.Domain.dll
+E:\1_PROJECTS\DotNetShop\shop\servicehost\bin\Debug\net5.0\Dm.Infrastructure.dll
+E:\1_PROJECTS\DotNetShop\shop\servicehost\bin\Debug\net5.0\Dm.Configuration.pdb
+E:\1_PROJECTS\DotNetShop\shop\servicehost\bin\Debug\net5.0\Dm.Application.pdb
+E:\1_PROJECTS\DotNetShop\shop\servicehost\bin\Debug\net5.0\Dm.Application.Contracts.pdb
+E:\1_PROJECTS\DotNetShop\shop\servicehost\bin\Debug\net5.0\Dm.Domain.pdb
+E:\1_PROJECTS\DotNetShop\shop\servicehost\bin\Debug\net5.0\Dm.Infrastructure.pdb
