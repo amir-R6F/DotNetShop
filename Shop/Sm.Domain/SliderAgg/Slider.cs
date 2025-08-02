@@ -5,6 +5,7 @@ namespace Sm.Domain.SliderAgg
     public class Slider : EntityBase
     {
         public string Picture { get; private set; }
+        public string Link { get; private set; } 
         public string PictureAlt { get; private set; }
         public string PictureTitle { get; private set; }
         public string Heading { get; private set; }
@@ -14,7 +15,7 @@ namespace Sm.Domain.SliderAgg
         public bool IsRemoved { get; private set; }
         
         
-        public Slider(string picture, string pictureAlt, string pictureTitle, string heading, string title, string text, string btnText)
+        public Slider(string picture, string pictureAlt, string pictureTitle, string heading, string title, string text, string btnText, string link)
         {
             Picture = picture;
             PictureAlt = pictureAlt;
@@ -23,10 +24,11 @@ namespace Sm.Domain.SliderAgg
             Title = title;
             Text = text;
             BtnText = btnText;
+            Link = link;
             IsRemoved = false;
         }
         
-        public void Edit(string picture, string pictureAlt, string pictureTitle, string heading, string title, string text, string btnText)
+        public void Edit(string picture, string pictureAlt, string pictureTitle, string heading, string title, string text, string btnText, string link)
         {
             Picture = picture;
             PictureAlt = pictureAlt;
@@ -35,6 +37,7 @@ namespace Sm.Domain.SliderAgg
             Title = title;
             Text = text;
             BtnText = btnText;
+            Link = link;
         }
 
         public void Remove()

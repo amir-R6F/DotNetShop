@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Shop.Application;
 using Shop.Infrastructure;
 using Sm.Application.Contracts.ProductPicture;
 using Sm.Domain.ProductPictureAgg;
@@ -38,7 +39,7 @@ namespace SM.Infrastructure.Repository
                 Id = x.Id,
                 Picture = x.Picture,
                 Product = x.Product.Name,
-                CreationDate = x.CreationDate.ToString(),
+                CreationDate = x.CreationDate.ToFarsi(),
                 ProductId = x.ProductId,
                 IsRemoved = x.IsRemoved
                 

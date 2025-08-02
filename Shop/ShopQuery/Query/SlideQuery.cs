@@ -24,7 +24,8 @@ namespace ShopQuery.Contracts.Query
                 BtnText = x.BtnText,
                 Heading = x.Heading,
                 Text = x.Text,
-                Title = x.Title
+                Title = x.Title,
+                Link = x.Link
             }).ToList();
         }
     }
