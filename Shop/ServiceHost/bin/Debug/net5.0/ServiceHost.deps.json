@@ -1324,7 +1324,8 @@
       },
       "Dm.Application.Contracts/1.0.0": {
         "dependencies": {
-          "Framework": "1.0.0"
+          "Framework": "1.0.0",
+          "Sm.Application.Contracts": "1.0.0"
         },
         "runtime": {
           "Dm.Application.Contracts.dll": {}

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\1_PROJECTS\\DotNetShop\\shop\\servicehost\\ServiceHost.csproj": {}
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\ServiceHost.csproj": {}
   },
   "projects": {
-    "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Application.Contracts\\Dm.Application.Contracts.csproj": {
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Application.Contracts\\Dm.Application.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Application.Contracts\\Dm.Application.Contracts.csproj",
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Application.Contracts\\Dm.Application.Contracts.csproj",
         "projectName": "Dm.Application.Contracts",
-        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Application.Contracts\\Dm.Application.Contracts.csproj",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Application.Contracts\\Dm.Application.Contracts.csproj",
         "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
-        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Application.Contracts\\obj\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Application.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Framework\\Framework.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Framework\\Framework.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj"
+              },
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj"
               }
             }
           }
@@ -60,14 +63,14 @@
         }
       }
     },
-    "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Application\\Dm.Application.csproj": {
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Application\\Dm.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Application\\Dm.Application.csproj",
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Application\\Dm.Application.csproj",
         "projectName": "Dm.Application",
-        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Application\\Dm.Application.csproj",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Application\\Dm.Application.csproj",
         "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
-        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Application\\obj\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -82,11 +85,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Application.Contracts\\Dm.Application.Contracts.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Application.Contracts\\Dm.Application.Contracts.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Application.Contracts\\Dm.Application.Contracts.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Application.Contracts\\Dm.Application.Contracts.csproj"
               },
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Domain\\Dm.Domain.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Domain\\Dm.Domain.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Domain\\Dm.Domain.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Domain\\Dm.Domain.csproj"
               }
             }
           }
@@ -119,14 +122,14 @@
         }
       }
     },
-    "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Configuration\\Dm.Configuration.csproj": {
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Configuration\\Dm.Configuration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Configuration\\Dm.Configuration.csproj",
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Configuration\\Dm.Configuration.csproj",
         "projectName": "Dm.Configuration",
-        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Configuration\\Dm.Configuration.csproj",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Configuration\\Dm.Configuration.csproj",
         "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
-        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Configuration\\obj\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Configuration\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -141,14 +144,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Application\\Dm.Application.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Application\\Dm.Application.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Application\\Dm.Application.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Application\\Dm.Application.csproj"
               },
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Domain\\Dm.Domain.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Domain\\Dm.Domain.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Domain\\Dm.Domain.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Domain\\Dm.Domain.csproj"
               },
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Infrastructure\\Dm.Infrastructure.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Infrastructure\\Dm.Infrastructure.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Infrastructure\\Dm.Infrastructure.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Infrastructure\\Dm.Infrastructure.csproj"
               }
             }
           }
@@ -187,14 +190,14 @@
         }
       }
     },
-    "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Domain\\Dm.Domain.csproj": {
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Domain\\Dm.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Domain\\Dm.Domain.csproj",
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Domain\\Dm.Domain.csproj",
         "projectName": "Dm.Domain",
-        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Domain\\Dm.Domain.csproj",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Domain\\Dm.Domain.csproj",
         "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
-        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Domain\\obj\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -209,11 +212,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Application.Contracts\\Dm.Application.Contracts.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Application.Contracts\\Dm.Application.Contracts.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Application.Contracts\\Dm.Application.Contracts.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Application.Contracts\\Dm.Application.Contracts.csproj"
               },
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Framework\\Framework.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Framework\\Framework.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj"
               }
             }
           }
@@ -246,14 +249,14 @@
         }
       }
     },
-    "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Infrastructure\\Dm.Infrastructure.csproj": {
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Infrastructure\\Dm.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Infrastructure\\Dm.Infrastructure.csproj",
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Infrastructure\\Dm.Infrastructure.csproj",
         "projectName": "Dm.Infrastructure",
-        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Infrastructure\\Dm.Infrastructure.csproj",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Infrastructure\\Dm.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
-        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Infrastructure\\obj\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -268,11 +271,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Domain\\Dm.Domain.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Domain\\Dm.Domain.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Domain\\Dm.Domain.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Domain\\Dm.Domain.csproj"
               },
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\SM.Infrastructure\\SM.Infrastructure.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\SM.Infrastructure\\SM.Infrastructure.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj"
               }
             }
           }
@@ -321,14 +324,14 @@
         }
       }
     },
-    "E:\\1_PROJECTS\\DotNetShop\\shop\\Framework\\Framework.csproj": {
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\shop\\Framework\\Framework.csproj",
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj",
         "projectName": "Framework",
-        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Framework\\Framework.csproj",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj",
         "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
-        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Framework\\obj\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -379,14 +382,14 @@
         }
       }
     },
-    "E:\\1_PROJECTS\\DotNetShop\\shop\\servicehost\\ServiceHost.csproj": {
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\ServiceHost.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\shop\\servicehost\\ServiceHost.csproj",
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\ServiceHost.csproj",
         "projectName": "ServiceHost",
-        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\servicehost\\ServiceHost.csproj",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\ServiceHost.csproj",
         "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
-        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\servicehost\\obj\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -401,17 +404,17 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Configuration\\Dm.Configuration.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Configuration\\Dm.Configuration.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Configuration\\Dm.Configuration.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Configuration\\Dm.Configuration.csproj"
               },
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\ShopQuery\\ShopQuery.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\ShopQuery\\ShopQuery.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj"
               },
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Configuration\\Sm.Configuration.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Configuration\\Sm.Configuration.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Configuration\\Sm.Configuration.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Configuration\\Sm.Configuration.csproj"
               },
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\SM.Infrastructure\\SM.Infrastructure.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\SM.Infrastructure\\SM.Infrastructure.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj"
               }
             }
           }
@@ -455,14 +458,14 @@
         }
       }
     },
-    "E:\\1_PROJECTS\\DotNetShop\\shop\\ShopQuery\\ShopQuery.csproj": {
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\shop\\ShopQuery\\ShopQuery.csproj",
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj",
         "projectName": "ShopQuery",
-        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\ShopQuery\\ShopQuery.csproj",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj",
         "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
-        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\ShopQuery\\obj\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -477,8 +480,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\SM.Infrastructure\\SM.Infrastructure.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\SM.Infrastructure\\SM.Infrastructure.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj"
               }
             }
           }
@@ -511,14 +514,14 @@
         }
       }
     },
-    "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj": {
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj",
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj",
         "projectName": "Sm.Application.Contracts",
-        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj",
         "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
-        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Application.Contracts\\obj\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -533,8 +536,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Framework\\Framework.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Framework\\Framework.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj"
               }
             }
           }
@@ -567,14 +570,14 @@
         }
       }
     },
-    "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Application\\Sm.Application.csproj": {
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application\\Sm.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Application\\Sm.Application.csproj",
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application\\Sm.Application.csproj",
         "projectName": "Sm.Application",
-        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Application\\Sm.Application.csproj",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application\\Sm.Application.csproj",
         "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
-        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Application\\obj\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -589,11 +592,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj"
               },
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Domain\\Sm.Domain.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Domain\\Sm.Domain.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Domain\\Sm.Domain.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Domain\\Sm.Domain.csproj"
               }
             }
           }
@@ -626,14 +629,14 @@
         }
       }
     },
-    "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Configuration\\Sm.Configuration.csproj": {
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Configuration\\Sm.Configuration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Configuration\\Sm.Configuration.csproj",
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Configuration\\Sm.Configuration.csproj",
         "projectName": "Sm.Configuration",
-        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Configuration\\Sm.Configuration.csproj",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Configuration\\Sm.Configuration.csproj",
         "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
-        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Configuration\\obj\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Configuration\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -648,14 +651,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\ShopQuery\\ShopQuery.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\ShopQuery\\ShopQuery.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj"
               },
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Domain\\Sm.Domain.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Domain\\Sm.Domain.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Domain\\Sm.Domain.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Domain\\Sm.Domain.csproj"
               },
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\SM.Infrastructure\\SM.Infrastructure.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\SM.Infrastructure\\SM.Infrastructure.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj"
               }
             }
           }
@@ -694,14 +697,14 @@
         }
       }
     },
-    "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Domain\\Sm.Domain.csproj": {
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Domain\\Sm.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Domain\\Sm.Domain.csproj",
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Domain\\Sm.Domain.csproj",
         "projectName": "Sm.Domain",
-        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Domain\\Sm.Domain.csproj",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Domain\\Sm.Domain.csproj",
         "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
-        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Domain\\obj\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -716,11 +719,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Framework\\Framework.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Framework\\Framework.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj"
               },
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj"
               }
             }
           }
@@ -753,14 +756,14 @@
         }
       }
     },
-    "E:\\1_PROJECTS\\DotNetShop\\shop\\SM.Infrastructure\\SM.Infrastructure.csproj": {
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\shop\\SM.Infrastructure\\SM.Infrastructure.csproj",
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj",
         "projectName": "SM.Infrastructure",
-        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\SM.Infrastructure\\SM.Infrastructure.csproj",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
-        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\SM.Infrastructure\\obj\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -775,11 +778,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Application\\Sm.Application.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Application\\Sm.Application.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application\\Sm.Application.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application\\Sm.Application.csproj"
               },
-              "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Domain\\Sm.Domain.csproj": {
-                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Domain\\Sm.Domain.csproj"
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Domain\\Sm.Domain.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Domain\\Sm.Domain.csproj"
               }
             }
           }

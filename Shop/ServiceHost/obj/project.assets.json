@@ -1526,7 +1526,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Framework": "1.0.0"
+          "Framework": "1.0.0",
+          "Sm.Application.Contracts": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Dm.Application.Contracts.dll": {}
@@ -6000,11 +6001,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\shop\\servicehost\\ServiceHost.csproj",
+      "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\ServiceHost.csproj",
       "projectName": "ServiceHost",
-      "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\servicehost\\ServiceHost.csproj",
+      "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\ServiceHost.csproj",
       "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
-      "outputPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\servicehost\\obj\\",
+      "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -6019,17 +6020,17 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Configuration\\Dm.Configuration.csproj": {
-              "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Dm.Configuration\\Dm.Configuration.csproj"
+            "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Configuration\\Dm.Configuration.csproj": {
+              "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Configuration\\Dm.Configuration.csproj"
             },
-            "E:\\1_PROJECTS\\DotNetShop\\shop\\ShopQuery\\ShopQuery.csproj": {
-              "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\ShopQuery\\ShopQuery.csproj"
+            "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj": {
+              "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj"
             },
-            "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Configuration\\Sm.Configuration.csproj": {
-              "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\Sm.Configuration\\Sm.Configuration.csproj"
+            "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Configuration\\Sm.Configuration.csproj": {
+              "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Configuration\\Sm.Configuration.csproj"
             },
-            "E:\\1_PROJECTS\\DotNetShop\\shop\\SM.Infrastructure\\SM.Infrastructure.csproj": {
-              "projectPath": "E:\\1_PROJECTS\\DotNetShop\\shop\\SM.Infrastructure\\SM.Infrastructure.csproj"
+            "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj": {
+              "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj"
             }
           }
         }

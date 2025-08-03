@@ -17,7 +17,7 @@ namespace SM.Infrastructure
 
         public DbSet<Slider> Sliders { get; set; }
 
-        public SmContext(DbContextOptions options) : base(options)
+        public SmContext(DbContextOptions<SmContext> options) : base(options)
         {
         }
         
