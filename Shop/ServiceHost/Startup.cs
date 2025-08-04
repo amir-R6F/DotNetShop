@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Dm.Configuration;
+using Im.Configuration;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -30,6 +31,7 @@ namespace ServiceHost
             
             Bootstrapper.configuration(services, Connectionstring);
             DmBootstrapper.configuration(services, Connectionstring);
+            ImBootstrapper.configuration(services, Connectionstring);
             
             services.AddRazorPages();
         }

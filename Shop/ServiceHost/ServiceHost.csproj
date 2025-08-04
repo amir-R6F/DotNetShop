@@ -6,6 +6,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Dm.Configuration\Dm.Configuration.csproj" />
+      <ProjectReference Include="..\Im.Configuration\Im.Configuration.csproj" />
       <ProjectReference Include="..\ShopQuery\ShopQuery.csproj" />
       <ProjectReference Include="..\Sm.Configuration\Sm.Configuration.csproj" />
       <ProjectReference Include="..\SM.Infrastructure\SM.Infrastructure.csproj" />

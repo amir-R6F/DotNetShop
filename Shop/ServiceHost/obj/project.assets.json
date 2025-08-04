@@ -1595,6 +1595,78 @@
           "bin/placeholder/Framework.dll": {}
         }
       },
+      "Im.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Im.Application.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Im.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Im.Application.dll": {}
+        }
+      },
+      "Im.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Im.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Im.Application.Contracts.dll": {}
+        }
+      },
+      "Im.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Im.Application": "1.0.0",
+          "Im.Domain": "1.0.0",
+          "Im.Infrastructure": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Im.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Im.Configuration.dll": {}
+        }
+      },
+      "Im.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Framework": "1.0.0",
+          "Im.Application.Contracts": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Im.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Im.Domain.dll": {}
+        }
+      },
+      "Im.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Im.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
+          "SM.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Im.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Im.Infrastructure.dll": {}
+        }
+      },
       "ShopQuery/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -5955,6 +6027,31 @@
       "path": "../Framework/Framework.csproj",
       "msbuildProject": "../Framework/Framework.csproj"
     },
+    "Im.Application/1.0.0": {
+      "type": "project",
+      "path": "../Im.Application/Im.Application.csproj",
+      "msbuildProject": "../Im.Application/Im.Application.csproj"
+    },
+    "Im.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../Im.Application.Contracts/Im.Application.Contracts.csproj",
+      "msbuildProject": "../Im.Application.Contracts/Im.Application.Contracts.csproj"
+    },
+    "Im.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../Im.Configuration/Im.Configuration.csproj",
+      "msbuildProject": "../Im.Configuration/Im.Configuration.csproj"
+    },
+    "Im.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Im.Domain/Im.Domain.csproj",
+      "msbuildProject": "../Im.Domain/Im.Domain.csproj"
+    },
+    "Im.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Im.Infrastructure/Im.Infrastructure.csproj",
+      "msbuildProject": "../Im.Infrastructure/Im.Infrastructure.csproj"
+    },
     "ShopQuery/1.0.0": {
       "type": "project",
       "path": "../ShopQuery/ShopQuery.csproj",
@@ -5989,6 +6086,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Dm.Configuration >= 1.0.0",
+      "Im.Configuration >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.17",
       "SM.Infrastructure >= 1.0.0",
       "ShopQuery >= 1.0.0",
@@ -6022,6 +6120,9 @@
           "projectReferences": {
             "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Configuration\\Dm.Configuration.csproj": {
               "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Configuration\\Dm.Configuration.csproj"
+            },
+            "E:\\1_PROJECTS\\DotNetShop\\Shop\\Im.Configuration\\Im.Configuration.csproj": {
+              "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Im.Configuration\\Im.Configuration.csproj"
             },
             "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj": {
               "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ShopQuery\\ShopQuery.csproj"

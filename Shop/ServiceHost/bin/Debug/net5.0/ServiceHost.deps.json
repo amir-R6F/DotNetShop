@@ -34,6 +34,7 @@
       "ServiceHost/1.0.0": {
         "dependencies": {
           "Dm.Configuration": "1.0.0",
+          "Im.Configuration": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.17",
           "SM.Infrastructure": "1.0.0",
           "ShopQuery": "1.0.0",
@@ -1383,6 +1384,68 @@
         },
         "compile": {
           "Framework.dll": {}
+        }
+      },
+      "Im.Application/1.0.0": {
+        "dependencies": {
+          "Im.Application.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "Im.Application.dll": {}
+        },
+        "compile": {
+          "Im.Application.dll": {}
+        }
+      },
+      "Im.Application.Contracts/1.0.0": {
+        "dependencies": {
+          "Framework": "1.0.0"
+        },
+        "runtime": {
+          "Im.Application.Contracts.dll": {}
+        },
+        "compile": {
+          "Im.Application.Contracts.dll": {}
+        }
+      },
+      "Im.Configuration/1.0.0": {
+        "dependencies": {
+          "Im.Application": "1.0.0",
+          "Im.Domain": "1.0.0",
+          "Im.Infrastructure": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+        },
+        "runtime": {
+          "Im.Configuration.dll": {}
+        },
+        "compile": {
+          "Im.Configuration.dll": {}
+        }
+      },
+      "Im.Domain/1.0.0": {
+        "dependencies": {
+          "Framework": "1.0.0",
+          "Im.Application.Contracts": "1.0.0"
+        },
+        "runtime": {
+          "Im.Domain.dll": {}
+        },
+        "compile": {
+          "Im.Domain.dll": {}
+        }
+      },
+      "Im.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Im.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
+          "SM.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "Im.Infrastructure.dll": {}
+        },
+        "compile": {
+          "Im.Infrastructure.dll": {}
         }
       },
       "ShopQuery/1.0.0": {
@@ -3851,6 +3914,31 @@
       "sha512": ""
     },
     "Framework/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Im.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Im.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Im.Configuration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Im.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Im.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

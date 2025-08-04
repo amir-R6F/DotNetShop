@@ -120,3 +120,13 @@ E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administr
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Discounts\ColleagueDiscount\Create.cshtml.g.cs
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Discounts\ColleagueDiscount\Edit.cshtml.g.cs
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Discounts\ColleagueDiscount\Index.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Im.Application.Contracts.dll
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Im.Application.dll
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Im.Configuration.dll
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Im.Domain.dll
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Im.Infrastructure.dll
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Im.Configuration.pdb
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Im.Application.pdb
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Im.Application.Contracts.pdb
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Im.Domain.pdb
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Im.Infrastructure.pdb
