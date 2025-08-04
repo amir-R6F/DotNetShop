@@ -1,11 +1,15 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using Shop.Application;
 using Sm.Application.Contracts.Product;
 
 namespace Dm.Application.Contracts.ColleagueDiscount
 {
     public class DefineColleagueDiscount
     {
+        [Range(1, 10000, ErrorMessage = ValidationMessages.IsRequired)]
         public long ProductId { get; set; }
+        [Range(1, 99, ErrorMessage = ValidationMessages.IsRequired)]
         public int DiscountRate { get; set; }
         public List<ProductViewModel> Products { get; set; }
     }
