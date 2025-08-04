@@ -24,6 +24,12 @@ namespace Im.Domain.InventoryAgg
             InvOperations = new List<InventoryOperations>();
         }
 
+        public void Edit(long productId, double unitPrice)
+        {
+            ProductId = productId;
+            UnitPrice = unitPrice;
+        }
+
         public long CalculateCurrentCount()
         {
             var sum = InvOperations.Where(x => x.Operation).Sum(x => x.Count);

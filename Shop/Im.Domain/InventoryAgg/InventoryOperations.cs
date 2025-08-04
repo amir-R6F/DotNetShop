@@ -15,6 +15,10 @@ namespace Im.Domain.InventoryAgg
         public long InventoryId { get; private set; }
         public Inventory Inventory { get; private set; }
 
+        private InventoryOperations()
+        {
+            
+        }
         public InventoryOperations(bool operation, long count, long operatorId, long currentCount, string description,
             long orderId, long inventoryId)
         {

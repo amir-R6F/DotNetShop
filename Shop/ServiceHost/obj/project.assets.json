@@ -1599,7 +1599,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Im.Application.Contracts": "1.0.0"
+          "Im.Application.Contracts": "1.0.0",
+          "Im.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Im.Application.dll": {}
