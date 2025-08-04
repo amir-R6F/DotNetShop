@@ -406,6 +406,9 @@
             "projectReferences": {
               "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj": {
                 "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj"
+              },
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application.Contracts\\Sm.Application.Contracts.csproj"
               }
             }
           }

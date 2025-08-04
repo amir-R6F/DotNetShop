@@ -3,6 +3,7 @@ using System.Linq;
 using Im.Application.Contracts.Inventory;
 using Im.Domain.InventoryAgg;
 using Microsoft.EntityFrameworkCore;
+using Shop.Application;
 using Shop.Infrastructure;
 using SM.Infrastructure;
 
@@ -40,10 +41,11 @@ namespace Im.Infrastructure.Repository
                 CurrentCount = x.CalculateCurrentCount(),
                 InStock = x.InStock,
                 ProductId = x.ProductId,
-                UnitPrice = x.UnitPrice
+                UnitPrice = x.UnitPrice,
+                CreationDate = x.CreationDate.ToFarsi()
             });
 
-            if (!searchModel.InStock)
+            if (searchModel.InStock)
                 query = query.Where(x => !x.InStock);
             if (searchModel.ProductId > 0)
                 query = query.Where(x => x.ProductId == searchModel.ProductId);

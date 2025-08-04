@@ -1613,7 +1613,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
-          "Framework": "1.0.0"
+          "Framework": "1.0.0",
+          "Sm.Application.Contracts": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Im.Application.Contracts.dll": {}

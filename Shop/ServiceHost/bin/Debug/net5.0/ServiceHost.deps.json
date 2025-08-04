@@ -1388,7 +1388,8 @@
       },
       "Im.Application/1.0.0": {
         "dependencies": {
-          "Im.Application.Contracts": "1.0.0"
+          "Im.Application.Contracts": "1.0.0",
+          "Im.Domain": "1.0.0"
         },
         "runtime": {
           "Im.Application.dll": {}
@@ -1399,7 +1400,8 @@
       },
       "Im.Application.Contracts/1.0.0": {
         "dependencies": {
-          "Framework": "1.0.0"
+          "Framework": "1.0.0",
+          "Sm.Application.Contracts": "1.0.0"
         },
         "runtime": {
           "Im.Application.Contracts.dll": {}

@@ -130,3 +130,6 @@ E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Im.Application.pdb
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Im.Application.Contracts.pdb
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Im.Domain.pdb
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Im.Infrastructure.pdb
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Inventory\Create.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Inventory\Edit.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Inventory\Index.cshtml.g.cs
