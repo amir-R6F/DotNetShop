@@ -36,7 +36,7 @@ namespace Sm.Domain.ProductCategoryAgg
             Slug = slug;
         }
         
-        public void Edit(string name, string description, string picture, string pictureAlt, string pictureTitle, string keywords, string metaDescription, string slug)
+        public void Edit(string name, string description, string picture, string pictureAlt, string pictureTitle, string keywords, string metaDescription)
         {
             Name = name;
             Description = description;
@@ -45,7 +45,6 @@ namespace Sm.Domain.ProductCategoryAgg
             PictureTitle = pictureTitle;
             Keywords = keywords;
             MetaDescription = metaDescription;
-            Slug = slug;
         }
     }
 }

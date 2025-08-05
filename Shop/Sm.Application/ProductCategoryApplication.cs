@@ -42,9 +42,8 @@ namespace Sm.Application
             if (_productCategoryRepository.Exists(x => x.Name == command.Name && x.Id != command.Id))
                 return operation.Failed("can't create duplicate product");
             
-            var slug = command.Slug.Slugify();
             productCategory.Edit(command.Name, command.Description, command.Picture,
-                command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription, slug);
+                command.PictureAlt, command.PictureTitle, command.Keywords, command.MetaDescription);
             
             _productCategoryRepository.SaveChanges();
             return operation.Succedded();

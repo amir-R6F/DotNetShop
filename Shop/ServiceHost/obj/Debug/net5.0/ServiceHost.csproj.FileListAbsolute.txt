@@ -137,3 +137,5 @@ E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administr
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Inventory\Increase.cshtml.g.cs
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Inventory\Log.cshtml.g.cs
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\CategoriesWithProducts\Default.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\LatestArrivals\Default.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\ProductCategory.cshtml.g.cs

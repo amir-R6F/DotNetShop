@@ -6,6 +6,7 @@ namespace ShopQuery.Contracts.ProductCategory
     {
         List<ProductCategoryQueryModel> GetCategories();
         List<ProductCategoryQueryModel> GetCategoriesWithProducts();
+        ProductCategoryQueryModel GetCategoryWithProductsBy(string slug);
 
     }
 }

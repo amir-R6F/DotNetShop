@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "E:\\1_PROJECTS\\DotNetShop\\Shop\\servicehost\\ServiceHost.csproj": {}
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\ServiceHost.csproj": {}
   },
   "projects": {
     "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Application.Contracts\\Dm.Application.Contracts.csproj": {
@@ -702,14 +702,14 @@
         }
       }
     },
-    "E:\\1_PROJECTS\\DotNetShop\\Shop\\servicehost\\ServiceHost.csproj": {
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\ServiceHost.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\servicehost\\ServiceHost.csproj",
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\ServiceHost.csproj",
         "projectName": "ServiceHost",
-        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\servicehost\\ServiceHost.csproj",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\ServiceHost.csproj",
         "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
-        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\servicehost\\obj\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -803,6 +803,12 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Infrastructure\\Dm.Infrastructure.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Infrastructure\\Dm.Infrastructure.csproj"
+              },
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Im.Infrastructure\\Im.Infrastructure.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Im.Infrastructure\\Im.Infrastructure.csproj"
+              },
               "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj": {
                 "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\SM.Infrastructure\\SM.Infrastructure.csproj"
               }

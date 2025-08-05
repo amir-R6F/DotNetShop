@@ -1452,6 +1452,8 @@
       },
       "ShopQuery/1.0.0": {
         "dependencies": {
+          "Dm.Infrastructure": "1.0.0",
+          "Im.Infrastructure": "1.0.0",
           "SM.Infrastructure": "1.0.0"
         },
         "runtime": {

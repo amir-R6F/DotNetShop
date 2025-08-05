@@ -1,6 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using Dm.Infrastructure;
+using Im.Infrastructure;
 using Microsoft.EntityFrameworkCore;
+using Shop.Application;
 using ShopQuery.Contracts.Product;
 using ShopQuery.Contracts.ProductCategory;
 using Sm.Application.Contracts.Product;
@@ -11,10 +15,15 @@ namespace ShopQuery.Contracts.Query
     public class ProductCategoryQuery : IProductCategoryQuery
     {
         private readonly SmContext _context;
+        private readonly InventoryContext _inventoryContext;
+        private readonly DiscountContext _discountContext;
 
-        public ProductCategoryQuery(SmContext context)
+        public ProductCategoryQuery(SmContext context, InventoryContext inventoryContext,
+            DiscountContext discountContext)
         {
             _context = context;
+            _inventoryContext = inventoryContext;
+            _discountContext = discountContext;
         }
 
         public List<ProductCategoryQueryModel> GetCategories()
@@ -32,7 +41,16 @@ namespace ShopQuery.Contracts.Query
 
         public List<ProductCategoryQueryModel> GetCategoriesWithProducts()
         {
-            return _context.ProductCategories
+            var inventory = _inventoryContext.Inventory
+                .Select(x => new { x.ProductId, x.UnitPrice })
+                .ToList();
+
+            var discounts = _discountContext.CustomerDiscounts
+                .Where(x => x.StartDate < DateTime.Now && x.EndDate > DateTime.Now)
+                .Select(x => new { x.ProductId, x.DiscountRate })
+                .ToList();
+
+            var categories = _context.ProductCategories
                 .Include(x => x.Products)
                 .ThenInclude(x => x.Category)
                 .Select(x => new ProductCategoryQueryModel
@@ -42,7 +60,29 @@ namespace ShopQuery.Contracts.Query
                     Products = MapProducts(x.Products)
                 }).ToList();
 
-            
+            foreach (var category in categories)
+            {
+                foreach (var product in category.Products)
+                {
+                    var productInventory = inventory.FirstOrDefault(x => x.ProductId == product.Id);
+                    if (productInventory != null)
+                    {
+                        var price = productInventory.UnitPrice;
+                        product.Price = price.ToMoney();
+                        var productDiscount = discounts.FirstOrDefault(x => x.ProductId == product.Id);
+                        if (productDiscount != null)
+                        {
+                            int discountRate = productDiscount.DiscountRate;
+                            product.DiscountRate = discountRate;
+                            product.HasDiscount = discountRate > 0;
+                            var discountAmount = Math.Round((price * discountRate) / 100);
+                            product.PriceWithDiscount = (price - discountAmount).ToMoney();
+                        }
+                    }
+                }
+            }
+
+            return categories;
         }
 
         private static List<ProductQueryModel> MapProducts(List<Sm.Domain.ProductAgg.Product> products)
@@ -57,25 +97,59 @@ namespace ShopQuery.Contracts.Query
                 PictureTitle = x.PictureTitle,
                 Slug = x.Slug
             }).ToList();
-        } 
-    //SAME RESULT WITH SELECT BUT ITS NOT CLEANE   
-    //BUT IF U NEED CONDITION U WILL USE THIS
-    //     var res = new List<ProductQueryModel>();
-    //         foreach (var x in products)
-    //     {
-    //         var item = new ProductQueryModel
-    //         {
-    //             Id = x.Id,
-    //             Name = x.Name,
-    //             Category = x.Category.Name,
-    //             Picture = x.Picture,
-    //             PictureAlt = x.PictureAlt,
-    //             PictureTitle = x.PictureTitle,
-    //             Slug = x.Slug
-    //         };
-    //         res.Add(item);
-    //     }
-    //
-    // return res;
+        }
+
+        public ProductCategoryQueryModel GetCategoryWithProductsBy(string slug)
+        {
+            var inventory = _inventoryContext.Inventory
+                .Select(x => new { x.ProductId, x.UnitPrice })
+                .ToList();
+
+            var discounts = _discountContext.CustomerDiscounts
+                .Where(x => x.StartDate < DateTime.Now && x.EndDate > DateTime.Now)
+                .Select(x => new { x.ProductId, x.DiscountRate, x.EndDate })
+                .ToList();
+
+            var category = _context.ProductCategories
+                .Include(x => x.Products)
+                .ThenInclude(x => x.Category)
+                .Select(x => new ProductCategoryQueryModel
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Products = MapProducts(x.Products),
+                    Slug = x.Slug,
+                    Description = x.Description,
+                    Keywords = x.Keywords,
+                    Picture = x.Picture,
+                    MetaDescription = x.MetaDescription,
+                    PictureAlt = x.PictureAlt,
+                    PictureTitle = x.PictureTitle
+                }).FirstOrDefault(x => x.Slug == slug);
+
+
+            foreach (var product in category.Products)
+            {
+                var productInventory = inventory.FirstOrDefault(x => x.ProductId == product.Id);
+                if (productInventory != null)
+                {
+                    var price = productInventory.UnitPrice;
+                    product.Price = price.ToMoney();
+                    var productDiscount = discounts.FirstOrDefault(x => x.ProductId == product.Id);
+                    if (productDiscount != null)
+                    {
+                        int discountRate = productDiscount.DiscountRate;
+                        product.DiscountRate = discountRate;
+                        product.DiscountExpireDate = productDiscount.EndDate.ToDiscountFormat();
+                        product.HasDiscount = discountRate > 0;
+                        var discountAmount = Math.Round((price * discountRate) / 100);
+                        product.PriceWithDiscount = (price - discountAmount).ToMoney();
+                    }
+                }
+            }
+
+
+            return category;
+        }
     }
 }
