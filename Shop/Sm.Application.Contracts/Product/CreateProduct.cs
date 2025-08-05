@@ -16,10 +16,6 @@ namespace Sm.Application.Contracts.Product
 
         [Required(ErrorMessage = ValidationMessages.IsRequired)]
 
-        public double UnitPrice { get; set; }
-
-        [Required(ErrorMessage = ValidationMessages.IsRequired)]
-
         public string ShortDescription { get; set; }
 
         public string Description { get; set; }

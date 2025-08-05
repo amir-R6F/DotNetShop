@@ -10,8 +10,6 @@ namespace Sm.Application.Contracts.Product
         OperationResult Edit(EditProduct command);
         List<ProductViewModel> Search(ProductSearchModel searchModel);
         EditProduct GetDetails(long id);
-        OperationResult InStock(long id);
-        OperationResult NotInStock(long id);
 
         List<ProductViewModel> GetProducts();
     }

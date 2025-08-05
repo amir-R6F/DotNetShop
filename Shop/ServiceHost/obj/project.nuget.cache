@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "45QYicWyAOGKaNAeLv4Ovn069XoOelfb2LqaGjNQYCI/JM3W6kzyeFbcb6dmSiShel50xFe5VlEEQ1la/GOcJw==",
+  "dgSpecHash": "8sOTj1LZO85NnNVp3fdf12T1UZOFvG7n5b0aPyu4Zf667SJTw1ZFVyBg7/dlKm/Daq9QhqXFhzoUfdvBZ7VhGw==",
   "success": true,
-  "projectFilePath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\ServiceHost.csproj",
+  "projectFilePath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\servicehost\\ServiceHost.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AATRIANLLC\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\AATRIANLLC\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\ServiceHost.csproj": {}
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\servicehost\\ServiceHost.csproj": {}
   },
   "projects": {
     "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Application.Contracts\\Dm.Application.Contracts.csproj": {
@@ -702,14 +702,14 @@
         }
       }
     },
-    "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\ServiceHost.csproj": {
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\servicehost\\ServiceHost.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\ServiceHost.csproj",
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\servicehost\\ServiceHost.csproj",
         "projectName": "ServiceHost",
-        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\ServiceHost.csproj",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\servicehost\\ServiceHost.csproj",
         "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
-        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\obj\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\servicehost\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
