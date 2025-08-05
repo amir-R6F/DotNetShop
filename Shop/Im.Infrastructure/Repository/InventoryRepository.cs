@@ -62,5 +62,24 @@ namespace Im.Infrastructure.Repository
         {
             return _context.Inventory.FirstOrDefault(x => x.ProductId == productId);
         }
+
+        public List<InventoryOprationViewModel> GetLog(long inventoryId)
+        {
+            var inventory = _context.Inventory.FirstOrDefault(x => x.Id == inventoryId);
+            
+                return inventory.InvOperations.Select(x => new InventoryOprationViewModel
+            {
+                Id = x.Id,
+                Count = x.Count,
+                OrderId = x.OrderId,
+                Description = x.Description,
+                Operation = x.Operation,
+                CurrentCount = x.CurrentCount,
+                OperatorId = x.OperatorId,
+                OperatorName = "admin",
+                OperationDate = x.OperationDate.ToFarsi()
+                
+            }).ToList();
+        }
     }
 }

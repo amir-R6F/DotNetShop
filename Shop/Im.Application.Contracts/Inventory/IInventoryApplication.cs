@@ -12,6 +12,7 @@ namespace Im.Application.Contracts.Inventory
         OperationResult Increase(IncreaseInventory command);
         OperationResult Decrease(DecreaseInventory command);
         OperationResult Decrease(List<DecreaseInventory> command);
+        List<InventoryOprationViewModel> GetLog(long inventoryId);
 
     }
 }
