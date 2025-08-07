@@ -27,7 +27,7 @@ namespace Sm.Application.Contracts.Product
 
         public string PictureTitle { get; set; }
 
-        [Range(1, 10000, ErrorMessage = ValidationMessages.IsRequired)]
+        [Range(1, 100000, ErrorMessage = ValidationMessages.IsRequired)]
         public long CategoryId { get; set; }
 
         [Required(ErrorMessage = ValidationMessages.IsRequired)]

@@ -50,8 +50,8 @@ namespace Sm.Application
             if (product == null)
                 return operation.Failed(ApplicationMessages.NotFound);
 
-            if (_productRepository.Exists(x => x.Name == command.Name && x.Id == command.Id))
-                return operation.Failed(ApplicationMessages.Duplicate);
+            // if (_productRepository.Exists(x => x.Name == command.Name && x.Id == command.Id))
+            //     return operation.Failed(ApplicationMessages.Duplicate);
 
             var slug = command.Slug.Slugify();
             var path = $"{product.Category.Slug.Slugify()}/{slug}";

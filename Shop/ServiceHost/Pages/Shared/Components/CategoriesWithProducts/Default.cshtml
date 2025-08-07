@@ -74,8 +74,8 @@
                                                                 <span class="sale">-@product.DiscountRate%</span>
                                                             </div>
                                                         }
-                                                        <a href="single-product.html">
-                                                            <img src="~/Theme/assets/img/products/4-600x800.jpg" class="img-fluid"
+                                                        <a asp-page="/product" asp-route-id="@product.Slug">
+                                                            <img src="~/productCategories/@product.Picture" class="img-fluid"
                                                                  alt="@product.PictureAlt">
                                                         </a>
 
@@ -103,8 +103,8 @@
                                                         <div class="single-grid-product__category-rating">
                                                             <span class="category">
                                                                 <a
-                                                                    href="shop-left-sidebar.html">
-                                                                    @product.Name
+                                                                    asp-page="ProductCategory" asp-route-id="@product.CategorySlug">
+                                                                    @product.Category
                                                                 </a>
                                                             </span>
                                                             <span class="rating">
@@ -118,7 +118,7 @@
 
                                                         <h3 class="single-grid-product__title">
                                                             <a
-                                                                href="single-product.html">
+                                                                asp-page="/product" asp-route-id="@product.Slug">
                                                                 @product.PictureTitle
                                                             </a>
                                                         </h3>

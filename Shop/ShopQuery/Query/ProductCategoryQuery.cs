@@ -36,7 +36,9 @@ namespace ShopQuery.Contracts.Query
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
                 Slug = x.Slug
-            }).ToList();
+            }).OrderByDescending(x => x.Id)
+                .Take(4)
+                .ToList();
         }
 
         public List<ProductCategoryQueryModel> GetCategoriesWithProducts()
@@ -58,7 +60,9 @@ namespace ShopQuery.Contracts.Query
                     Id = x.Id,
                     Name = x.Name,
                     Products = MapProducts(x.Products)
-                }).ToList();
+                }).OrderByDescending(x => x.Id)
+                .Take(5)
+                .ToList();
 
             foreach (var category in categories)
             {
