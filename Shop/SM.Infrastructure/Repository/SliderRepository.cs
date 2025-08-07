@@ -23,7 +23,7 @@ namespace SM.Infrastructure.Repository
             {
                 Id = x.Id,
                 Heading = x.Heading,
-                Picture = x.Picture,
+                // Picture = x.Picture,
                 Text = x.Text,
                 Title = x.Title,
                 BtnText = x.BtnText,

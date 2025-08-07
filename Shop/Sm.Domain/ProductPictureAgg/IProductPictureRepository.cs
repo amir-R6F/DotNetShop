@@ -10,5 +10,7 @@ namespace Sm.Domain.ProductPictureAgg
         EditProductPicture GetDetails(long id);
 
         List<ProductPictureViewModel> Search(ProductPictureSearchModel searchModel);
+
+        ProductPicture GetProductPictureWithProductBy(long id);
     }
 }

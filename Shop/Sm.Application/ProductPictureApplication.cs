@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Shop.Application;
 using Sm.Application.Contracts.ProductPicture;
+using Sm.Domain.ProductAgg;
 using Sm.Domain.ProductPictureAgg;
 
 namespace Sm.Application
@@ -8,23 +10,28 @@ namespace Sm.Application
     public class ProductPictureApplication : IProductPictureApplication
     {
         private readonly IProductPictureRepository _productPictureRepository;
+        private readonly IProductRepository _productRepository;
+        private readonly IFileUploader _fileUploader;
 
-
-        public ProductPictureApplication(IProductPictureRepository productPictureRepository)
+        public ProductPictureApplication(IProductPictureRepository productPictureRepository, IProductRepository productRepository, IFileUploader fileUploader)
         {
             _productPictureRepository = productPictureRepository;
+            _productRepository = productRepository;
+            _fileUploader = fileUploader;
         }
 
         public OperationResult Create(CreateProductPicture command)
         {
             var operation = new OperationResult();
-            if (_productPictureRepository.Exists(x =>
-                x.Picture == command.Picture &&
-                x.ProductId == command.ProductId))
-                return operation.Failed(ApplicationMessages.Duplicate);
 
-            var picture = new ProductPicture(command.ProductId, command.Picture, command.PictureAlt,
+            var product = _productRepository.GetProductWithCategoryBy(command.ProductId);
+
+            var path = $"{product.Category.Slug.Slugify()}//{product.Slug.Slugify()}";
+            var fileName = _fileUploader.Upload(command.Picture, path);
+
+            var picture = new ProductPicture(command.ProductId, fileName, command.PictureAlt,
                 command.PictureTitle);
+            
             _productPictureRepository.Create(picture);
             _productPictureRepository.SaveChanges();
             return operation.Succedded();
@@ -34,17 +41,17 @@ namespace Sm.Application
         {
             var operation = new OperationResult();
 
-            var picture = _productPictureRepository.Get(command.Id);
+            var picture = _productPictureRepository.GetProductPictureWithProductBy(command.Id);
+            
             if (picture == null)
                 return operation.Failed(ApplicationMessages.NotFound);
 
-            if (_productPictureRepository.Exists(x =>
-                x.Picture == command.Picture &&
-                x.ProductId == command.ProductId &&
-                x.Id != command.Id))
-                return operation.Failed(ApplicationMessages.Duplicate);
+            var path = $"{picture.Product.Category.Slug.Slugify()}//{picture.Product.Slug.Slugify()}";
+            Console.WriteLine("wwwwwwwwwwwwwwwww");
+            Console.WriteLine(path);
+            var fileName = _fileUploader.Upload(command.Picture, path);
 
-            picture.Edit(command.ProductId, command.Picture, command.PictureAlt,
+            picture.Edit(command.ProductId, fileName, command.PictureAlt,
                 command.PictureTitle);
             
             _productPictureRepository.SaveChanges();

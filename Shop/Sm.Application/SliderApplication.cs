@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Http;
 using Shop.Application;
 using Sm.Application.Contracts.Slider;
 using Sm.Domain.SliderAgg;
@@ -8,17 +9,22 @@ namespace Sm.Application
     public class SliderApplication : ISliderApplication
     {
         private readonly ISliderRepository _sliderRepository;
+        private readonly IFileUploader _fileUploader;
 
-
-        public SliderApplication(ISliderRepository sliderRepository)
+        public SliderApplication(ISliderRepository sliderRepository, IFileUploader fileUploader)
         {
             _sliderRepository = sliderRepository;
+            _fileUploader = fileUploader;
         }
 
         public OperationResult Create(CreateSlider command)
         {
             var operation = new OperationResult();
-            var slider = new Slider(command.Picture, command.PictureAlt, command.PictureTitle, command.Heading,
+
+            var path = "Sliders";
+            var fileName = _fileUploader.Upload(command.Picture, path);
+            
+            var slider = new Slider(fileName, command.PictureAlt, command.PictureTitle, command.Heading,
                 command.Title, command.Text, command.BtnText, command.Link);
 
             _sliderRepository.Create(slider);
@@ -30,10 +36,14 @@ namespace Sm.Application
         {
             var operation = new OperationResult();
             var slider = _sliderRepository.Get(command.Id);
+            
             if (slider == null)
                 return operation.Failed(ApplicationMessages.NotFound);
 
-            slider.Edit(command.Picture, command.PictureAlt, command.PictureTitle, command.Heading,
+            var path = "Sliders";
+            var fileName = _fileUploader.Upload(command.Picture, path);
+            
+            slider.Edit(fileName, command.PictureAlt, command.PictureTitle, command.Heading,
                 command.Title, command.Text, command.BtnText, command.Link);
 
             _sliderRepository.SaveChanges();

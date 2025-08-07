@@ -12,5 +12,8 @@ namespace Sm.Domain.ProductCategoryAgg
         List<ProductCategoryViewModel> Search(ProductCategorySearchModel searchModel);
 
         List<ProductCategoryViewModel> GetCategories();
+
+        string GetSlugBy(long id);
+
     }
 }

@@ -2,16 +2,21 @@
 using Shop.Application;
 using Sm.Application.Contracts.Product;
 using Sm.Domain.ProductAgg;
+using Sm.Domain.ProductCategoryAgg;
 
 namespace Sm.Application
 {
     public class ProductApplication : IProductApplication
     {
         private readonly IProductRepository _productRepository;
+        private readonly IProductCategoryRepository _productCategoryRepository;
+        private readonly IFileUploader _fileUploader;
 
-        public ProductApplication(IProductRepository productRepository)
+        public ProductApplication(IProductRepository productRepository, IProductCategoryRepository productCategoryRepository, IFileUploader fileUploader)
         {
             _productRepository = productRepository;
+            _productCategoryRepository = productCategoryRepository;
+            _fileUploader = fileUploader;
         }
 
         public OperationResult Create(CreateProduct command)
@@ -22,9 +27,13 @@ namespace Sm.Application
                 return operation.Failed(ApplicationMessages.Duplicate);
 
             var slug = command.Slug.Slugify();
+            var category = _productCategoryRepository.GetSlugBy(command.CategoryId);
+            
+            var filename = _fileUploader.Upload(command.Picture, category.Slugify());
+
 
             var product = new Product(command.Name, command.Code, command.ShortDescription,
-                command.Description, command.Picture, command.PictureAlt,
+                command.Description, filename, command.PictureAlt,
                 command.PictureTitle, command.CategoryId, slug, command.Keywords, command.MetaDescription);
 
             _productRepository.Create(product);
@@ -36,7 +45,7 @@ namespace Sm.Application
         {
             var operation = new OperationResult();
 
-            var product = _productRepository.Get(command.Id);
+            var product = _productRepository.GetProductWithCategoryBy(command.Id);
 
             if (product == null)
                 return operation.Failed(ApplicationMessages.NotFound);
@@ -45,9 +54,11 @@ namespace Sm.Application
                 return operation.Failed(ApplicationMessages.Duplicate);
 
             var slug = command.Slug.Slugify();
+            var path = $"{product.Category.Slug.Slugify()}/{slug}";
+            var FileName = _fileUploader.Upload(command.Picture, path);
 
             product.Edit(command.Name, command.Code, command.ShortDescription,
-                command.Description, command.Picture, command.PictureAlt,
+                command.Description, FileName, command.PictureAlt,
                 command.PictureTitle, command.CategoryId, slug, command.Keywords, command.MetaDescription);
             _productRepository.SaveChanges();
             return operation.Succedded();

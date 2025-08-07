@@ -142,3 +142,4 @@ E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\ProductCa
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\Menu\Default.cshtml.g.cs
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\Footer\Default.cshtml.g.cs
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Search.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\ServiceHost.MvcApplicationPartsAssemblyInfo.cs

@@ -16,8 +16,8 @@ SinglePage.LoadModal = function () {
             $.validator.unobtrusive.parse(newForm);
             showModal();
         }).fail(function (error) {
-            alert("خطایی رخ داده، لطفا با مدیر سیستم تماس بگیرید.");
-        });
+        alert("خطایی رخ داده، لطفا با مدیر سیستم تماس بگیرید.");
+    });
 };
 
 function showModal() {
@@ -44,7 +44,7 @@ $(document).ready(function () {
     $(document).on("submit",
         'form[data-ajax="true"]',
         function (e) {
-            e.preventDefault();
+            e.preventDefault()
             var form = $(this);
             const method = form.attr("method").toLocaleLowerCase();
             const url = form.attr("action");
@@ -58,15 +58,16 @@ $(document).ready(function () {
                         CallBackHandler(data, action, form);
                     });
             } else {
-                var formData = new FormData(this);
+                var formdata = new FormData(this);
+                
                 $.ajax({
                     url: url,
                     type: "post",
-                    data: formData,
-                    enctype: "multipart/form-data",
-                    dataType: "json",
+                    data: formdata,
+                    enctype:"multipart/form-data",
                     processData: false,
                     contentType: false,
+                    dataType: "json",
                     success: function (data) {
                         CallBackHandler(data, action, form);
                     },
@@ -91,19 +92,17 @@ function CallBackHandler(data, action, form) {
                 alert(data.message);
             }
             break;
-        case "RefereshList":
-            {
-                hideModal();
-                const refereshUrl = form.attr("data-refereshurl");
-                const refereshDiv = form.attr("data-refereshdiv");
-                get(refereshUrl, refereshDiv);
-            }
+        case "RefereshList": {
+            hideModal();
+            const refereshUrl = form.attr("data-refereshurl");
+            const refereshDiv = form.attr("data-refereshdiv");
+            get(refereshUrl, refereshDiv);
+        }
             break;
-        case "setValue":
-            {
-                const element = form.data("element");
-                $(`#${element}`).html(data);
-            }
+        case "setValue": {
+            const element = form.data("element");
+            $(`#${element}`).html(data);
+        }
             break;
         default:
     }
@@ -179,12 +178,12 @@ function handleAjaxCall(method, url, data) {
             function (data) {
 
             }).fail(function (error) {
-                alert("خطایی رخ داده است. لطفا با مدیر سیستم تماس بگیرید.");
-            });
+            alert("خطایی رخ داده است. لطفا با مدیر سیستم تماس بگیرید.");
+        });
     }
 }
 
-jQuery.validator.addMethod("maxFileSize",
+jQuery.validator.addMethod("myMax",
     function (value, element, params) {
         var size = element.files[0].size;
         var maxSize = 3 * 1024 * 1024;
@@ -194,7 +193,16 @@ jQuery.validator.addMethod("maxFileSize",
             return true;
         }
     });
-jQuery.validator.unobtrusive.adapters.addBool("maxFileSize");
+jQuery.validator.unobtrusive.adapters.addBool("myMax");
+
+
+jQuery.validator.addMethod("extentionLimit",
+   function (value, element, params) {
+       var mimeType = element.files[0].type;
+       var allowedTypes = ["image/jpeg", "image/png"];
+       return allowedTypes.includes(mimeType);
+   });
+jQuery.validator.unobtrusive.adapters.addBool("extentionLimit");
 
 //jQuery.validator.addMethod("maxFileSize",
 //    function (value, element, params) {

@@ -1,8 +1,10 @@
-﻿namespace Sm.Application.Contracts.Slider
+﻿using Microsoft.AspNetCore.Http;
+
+namespace Sm.Application.Contracts.Slider
 {
     public class CreateSlider
     {
-        public string Picture { get; set; }
+        public IFormFile Picture { get; set; }
         public string PictureAlt { get; set; }
         public string PictureTitle { get; set; }
         public string Link { get; set; }

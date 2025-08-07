@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Shop.Application;
 using Sm.Configuration;
 using SM.Infrastructure;
 
@@ -32,6 +33,8 @@ namespace ServiceHost
             Bootstrapper.configuration(services, Connectionstring);
             DmBootstrapper.configuration(services, Connectionstring);
             ImBootstrapper.configuration(services, Connectionstring);
+
+            services.AddTransient<IFileUploader, FileUploader>();
             
             services.AddRazorPages();
         }

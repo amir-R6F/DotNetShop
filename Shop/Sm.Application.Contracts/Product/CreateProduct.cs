@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Http;
 using Shop.Application;
 using Sm.Application.Contracts.ProductCategory;
 
@@ -20,13 +21,13 @@ namespace Sm.Application.Contracts.Product
 
         public string Description { get; set; }
 
-        public string Picture { get; set; }
+        public IFormFile Picture { get; set; }
 
         public string PictureAlt { get; set; }
 
         public string PictureTitle { get; set; }
 
-        [Range(1, 1000, ErrorMessage = ValidationMessages.IsRequired)]
+        [Range(1, 10000, ErrorMessage = ValidationMessages.IsRequired)]
         public long CategoryId { get; set; }
 
         [Required(ErrorMessage = ValidationMessages.IsRequired)]

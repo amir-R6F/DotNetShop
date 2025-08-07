@@ -12,3 +12,5 @@ dotnet ef database update --startup-project servicehost
 dotnet ef migrations add AddCustomerDiscountFromDM  --project dm.Infrastructure  --startup-project servicehost  --context DiscountContext
 dotnet ef database update  --startup-project servicehost  --project dm.Infrastructure  --context DiscountContext
 
+======
+dotnet add package Microsoft.AspNetCore.Http --version 2.2.2
