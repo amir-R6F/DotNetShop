@@ -144,3 +144,4 @@ E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Co
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Search.cshtml.g.cs
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\ServiceHost.MvcApplicationPartsAssemblyInfo.cs
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Product.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Comments\Index.cshtml.g.cs

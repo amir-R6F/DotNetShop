@@ -24,4 +24,8 @@
       </PackageReference>
     </ItemGroup>
 
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Areas\Administrator\Pages\Comments\Index.cshtml" />
+    </ItemGroup>
+
 </Project>
