@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using ShopQuery.Contracts.Comment;
 using ShopQuery.Contracts.ProductPicture;
 
 namespace ShopQuery.Contracts.Product
@@ -19,6 +20,7 @@ namespace ShopQuery.Contracts.Product
         public string Picture { get; set; }
         
         public List<ProductPictureQueryModel> Pictures { get; set; }
+        public List<CommentQueryModel> Comments { get; set; }
 
         public string PictureAlt { get; set; }
 

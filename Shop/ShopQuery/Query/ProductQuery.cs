@@ -5,6 +5,7 @@ using Dm.Infrastructure;
 using Im.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Shop.Application;
+using ShopQuery.Contracts.Comment;
 using ShopQuery.Contracts.Product;
 using ShopQuery.Contracts.ProductPicture;
 using SM.Infrastructure;
@@ -140,6 +141,7 @@ namespace ShopQuery.Contracts.Query
 
             var product = _context.Products
                 .Include(x => x.Category)
+                .Include(x => x.Comments)
                 .Include(x => x.ProductPictures)
                 .Select(x => new ProductQueryModel
                 {
@@ -156,6 +158,7 @@ namespace ShopQuery.Contracts.Query
                     Description = x.Description,
                     Code = x.Code,
                     Keywords = x.Keywords,
+                    Comments = CommentMapping(x.Comments)
                     
                     
                     
@@ -192,6 +195,19 @@ namespace ShopQuery.Contracts.Query
                 PictureAlt = x.PictureAlt,
                 PictureTitle = x.PictureTitle,
                 IsRemoved = x.IsRemoved
+            }).ToList();
+        }
+        
+        private static List<CommentQueryModel> CommentMapping(List<Sm.Domain.CommentAgg.Comment> Comments)
+        {
+            return Comments
+                .Where(x => !x.IsCanceled)
+                .Where(x => x.IsConfirmed)
+                .Select(x => new CommentQueryModel
+            {
+                Email = x.Email,
+                Message = x.Message,
+                Name = x.Name,
             }).ToList();
         }
     }

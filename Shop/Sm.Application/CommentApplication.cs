@@ -24,6 +24,7 @@ namespace Sm.Application
             var comment = new Comment(command.Name, command.Email, command.Message, command.ProductId);
 
             _commentRepository.Create(comment);
+            _commentRepository.SaveChanges();
             
             return operation.Succedded();
         }
@@ -42,6 +43,8 @@ namespace Sm.Application
                 return operation.Failed(ApplicationMessages.NotFound);
             
             comment.Confirmed();
+            _commentRepository.SaveChanges();
+            
             return operation.Succedded();
             
         }
@@ -55,6 +58,7 @@ namespace Sm.Application
                 return operation.Failed(ApplicationMessages.NotFound);
             
             comment.Cancel();
+            _commentRepository.SaveChanges();
             return operation.Succedded();
         }
     }
