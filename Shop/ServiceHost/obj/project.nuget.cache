@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AxR5QYDZaGIs1sVe0hiZaDn+I5sEwae5mXXOsWJJB/K+MYncMaZXLIJh4rC8O+Cun5fDbNGC+b0T+8FR4kU72A==",
+  "dgSpecHash": "Uq1su6YOJ/Tfpiy9AMXAsCcJfYS2iJ575pL6Hvv0wZuNOiWDCY/IQgQeMy7R5pr4N9ZNNsgy0PSigJ1j7krM4w==",
   "success": true,
   "projectFilePath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\ServiceHost.csproj",
   "expectedPackageFiles": [
@@ -21,8 +21,8 @@
     "C:\\Users\\AATRIANLLC\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\AATRIANLLC\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "C:\\Users\\AATRIANLLC\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
-    "C:\\Users\\AATRIANLLC\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.2\\microsoft.extensions.dependencyinjection.5.0.2.nupkg.sha512",
-    "C:\\Users\\AATRIANLLC\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\AATRIANLLC\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.8\\microsoft.extensions.dependencyinjection.9.0.8.nupkg.sha512",
+    "C:\\Users\\AATRIANLLC\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.8\\microsoft.extensions.dependencyinjection.abstractions.9.0.8.nupkg.sha512",
     "C:\\Users\\AATRIANLLC\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\AATRIANLLC\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\AATRIANLLC\\.nuget\\packages\\microsoft.extensions.objectpool\\2.2.0\\microsoft.extensions.objectpool.2.2.0.nupkg.sha512",

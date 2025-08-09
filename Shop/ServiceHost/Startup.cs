@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Bm.Configuration;
 using Dm.Configuration;
 using Im.Configuration;
 using Microsoft.AspNetCore.Builder;
@@ -33,6 +34,7 @@ namespace ServiceHost
             Bootstrapper.configuration(services, Connectionstring);
             DmBootstrapper.configuration(services, Connectionstring);
             ImBootstrapper.configuration(services, Connectionstring);
+            BmBootstrapper.configuration(services, Connectionstring);
 
             services.AddTransient<IFileUploader, FileUploader>();
             

@@ -262,25 +262,31 @@
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection/5.0.2": {
+      "Microsoft.Extensions.DependencyInjection/9.0.8": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0"
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.8"
         },
         "compile": {
-          "lib/net5.0/Microsoft.Extensions.DependencyInjection.dll": {}
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
         },
         "runtime": {
-          "lib/net5.0/Microsoft.Extensions.DependencyInjection.dll": {}
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.targets": {}
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.8": {
         "type": "package",
         "compile": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+          "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {}
+        },
+        "build": {
+          "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets": {}
         }
       },
       "Microsoft.Extensions.Logging/5.0.0": {
@@ -1602,6 +1608,94 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Bm.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Bm.Application.Contracts": "1.0.0",
+          "Bm.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Bm.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bm.Application.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Bm.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Framework": "1.0.0",
+          "Microsoft.AspNetCore.Http": "2.2.2"
+        },
+        "compile": {
+          "bin/placeholder/Bm.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bm.Application.Contracts.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Bm.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Bm.Application": "1.0.0",
+          "Bm.Domain": "1.0.0",
+          "Bm.Infrastructure": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection": "9.0.8"
+        },
+        "compile": {
+          "bin/placeholder/Bm.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bm.Configuration.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Bm.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Bm.Application.Contracts": "1.0.0",
+          "Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Bm.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bm.Domain.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Bm.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Bm.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
+        },
+        "compile": {
+          "bin/placeholder/Bm.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Bm.Infrastructure.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Dm.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -2270,48 +2364,64 @@
         "version.txt"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection/5.0.2": {
-      "sha512": "xzFW00AZEvOXM1OX+0+AYH5op/Hf3u//e6wszBd/rK72sypD+jx5CtsHxM4BVuFBEs8SajfO4QzSJtrQaHDr4A==",
+    "Microsoft.Extensions.DependencyInjection/9.0.8": {
+      "sha512": "JJjI2Fa+QtZcUyuNjbKn04OjIUX5IgFGFu/Xc+qvzh1rXdZHLcnqqVXhR4093bGirTwacRlHiVg1XYI9xum6QQ==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection/5.0.2",
+      "path": "microsoft.extensions.dependencyinjection/9.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
+        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Extensions.DependencyInjection.dll",
-        "lib/net461/Microsoft.Extensions.DependencyInjection.xml",
-        "lib/net5.0/Microsoft.Extensions.DependencyInjection.dll",
-        "lib/net5.0/Microsoft.Extensions.DependencyInjection.xml",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.targets",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.xml",
+        "lib/net9.0/Microsoft.Extensions.DependencyInjection.dll",
+        "lib/net9.0/Microsoft.Extensions.DependencyInjection.xml",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.xml",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.dll",
         "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.xml",
-        "microsoft.extensions.dependencyinjection.5.0.2.nupkg.sha512",
+        "microsoft.extensions.dependencyinjection.9.0.8.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/5.0.0": {
-      "sha512": "ORj7Zh81gC69TyvmcUm9tSzytcy8AVousi+IVRAI8nLieQjOFryRusSFh7+aLk16FN9pQNqJAiMd7BTKINK0kA==",
+    "Microsoft.Extensions.DependencyInjection.Abstractions/9.0.8": {
+      "sha512": "xY3lTjj4+ZYmiKIkyWitddrp1uL5uYiweQjqo4BKBw01ZC4HhcfgLghDpPZcUlppgWAFqFy9SgkiYWOMx365pw==",
       "type": "package",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/5.0.0",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/9.0.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
+        "PACKAGE.md",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-        "lib/net461/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "buildTransitive/net461/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.Abstractions.targets",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
-        "microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "lib/netstandard2.1/Microsoft.Extensions.DependencyInjection.Abstractions.xml",
+        "microsoft.extensions.dependencyinjection.abstractions.9.0.8.nupkg.sha512",
         "microsoft.extensions.dependencyinjection.abstractions.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "Microsoft.Extensions.Logging/5.0.0": {
@@ -6274,6 +6384,31 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Bm.Application/1.0.0": {
+      "type": "project",
+      "path": "../Bm.Application/Bm.Application.csproj",
+      "msbuildProject": "../Bm.Application/Bm.Application.csproj"
+    },
+    "Bm.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../Bm.Application.Contracts/Bm.Application.Contracts.csproj",
+      "msbuildProject": "../Bm.Application.Contracts/Bm.Application.Contracts.csproj"
+    },
+    "Bm.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../Bm.Configuration/Bm.Configuration.csproj",
+      "msbuildProject": "../Bm.Configuration/Bm.Configuration.csproj"
+    },
+    "Bm.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Bm.Domain/Bm.Domain.csproj",
+      "msbuildProject": "../Bm.Domain/Bm.Domain.csproj"
+    },
+    "Bm.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Bm.Infrastructure/Bm.Infrastructure.csproj",
+      "msbuildProject": "../Bm.Infrastructure/Bm.Infrastructure.csproj"
+    },
     "Dm.Application/1.0.0": {
       "type": "project",
       "path": "../Dm.Application/Dm.Application.csproj",
@@ -6362,6 +6497,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Bm.Configuration >= 1.0.0",
       "Dm.Configuration >= 1.0.0",
       "Im.Configuration >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.17",
@@ -6395,6 +6531,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "E:\\1_PROJECTS\\DotNetShop\\Shop\\Bm.Configuration\\Bm.Configuration.csproj": {
+              "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Bm.Configuration\\Bm.Configuration.csproj"
+            },
             "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Configuration\\Dm.Configuration.csproj": {
               "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Configuration\\Dm.Configuration.csproj"
             },
