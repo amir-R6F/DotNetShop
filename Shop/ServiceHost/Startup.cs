@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.Encodings.Web;
+using System.Text.Unicode;
 using System.Threading.Tasks;
 using Bm.Configuration;
+using Cm.Configuration;
 using Dm.Configuration;
 using Im.Configuration;
 using Microsoft.AspNetCore.Builder;
@@ -35,6 +38,9 @@ namespace ServiceHost
             DmBootstrapper.configuration(services, Connectionstring);
             ImBootstrapper.configuration(services, Connectionstring);
             BmBootstrapper.configuration(services, Connectionstring);
+            CmBootstrapper.configuration(services, Connectionstring);
+
+            // services.AddSingleton(HtmlEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Arabic));
 
             services.AddTransient<IFileUploader, FileUploader>();
             

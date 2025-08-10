@@ -34,6 +34,8 @@
       "ServiceHost/1.0.0": {
         "dependencies": {
           "Bm.Configuration": "1.0.0",
+          "Cm.Application.Contracts": "1.0.0",
+          "Cm.Configuration": "1.0.0",
           "Dm.Configuration": "1.0.0",
           "Im.Configuration": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.17",
@@ -1385,7 +1387,8 @@
           "Bm.Application": "1.0.0",
           "Bm.Domain": "1.0.0",
           "Bm.Infrastructure": "1.0.0",
-          "Microsoft.Extensions.DependencyInjection": "9.0.8"
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "ShopQuery": "1.0.0"
         },
         "runtime": {
           "Bm.Configuration.dll": {}
@@ -1417,6 +1420,68 @@
         },
         "compile": {
           "Bm.Infrastructure.dll": {}
+        }
+      },
+      "Cm.Application/1.0.0": {
+        "dependencies": {
+          "Cm.Application.Contracts": "1.0.0",
+          "Cm.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Cm.Application.dll": {}
+        },
+        "compile": {
+          "Cm.Application.dll": {}
+        }
+      },
+      "Cm.Application.Contracts/1.0.0": {
+        "dependencies": {
+          "Framework": "1.0.0"
+        },
+        "runtime": {
+          "Cm.Application.Contracts.dll": {}
+        },
+        "compile": {
+          "Cm.Application.Contracts.dll": {}
+        }
+      },
+      "Cm.Configuration/1.0.0": {
+        "dependencies": {
+          "Cm.Application": "1.0.0",
+          "Cm.Application.Contracts": "1.0.0",
+          "Cm.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "Cm.Configuration.dll": {}
+        },
+        "compile": {
+          "Cm.Configuration.dll": {}
+        }
+      },
+      "Cm.Domain/1.0.0": {
+        "dependencies": {
+          "Cm.Application.Contracts": "1.0.0",
+          "Framework": "1.0.0"
+        },
+        "runtime": {
+          "Cm.Domain.dll": {}
+        },
+        "compile": {
+          "Cm.Domain.dll": {}
+        }
+      },
+      "Cm.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Cm.Domain": "1.0.0",
+          "Framework": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
+        },
+        "runtime": {
+          "Cm.Infrastructure.dll": {}
+        },
+        "compile": {
+          "Cm.Infrastructure.dll": {}
         }
       },
       "Dm.Application/1.0.0": {
@@ -1561,6 +1626,8 @@
       },
       "ShopQuery/1.0.0": {
         "dependencies": {
+          "Bm.Infrastructure": "1.0.0",
+          "Cm.Infrastructure": "1.0.0",
           "Dm.Infrastructure": "1.0.0",
           "Im.Infrastructure": "1.0.0",
           "SM.Infrastructure": "1.0.0"
@@ -4073,6 +4140,31 @@
       "sha512": ""
     },
     "Bm.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Cm.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Cm.Application.Contracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Cm.Configuration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Cm.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Cm.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

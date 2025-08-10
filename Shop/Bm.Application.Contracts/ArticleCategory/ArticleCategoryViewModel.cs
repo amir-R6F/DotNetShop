@@ -7,5 +7,7 @@
         public string Picture { get; set; }
         public string Description { get; set; }
         public int ShowOrder { get; set; }
+        
+        public int ArticlesCount { get; set; }
     }
 }

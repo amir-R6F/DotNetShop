@@ -308,9 +308,9 @@
                                             <label for="your-review">نظر شما:</label>
                                             <textarea name="Message" id="Message" placeholder="نظر خود را بنویسید ..."></textarea>
                                         </div>
-                                        @* <input type="hidden" name="ownerRecordId" value="@Model._Product.Id"/> *@
+                                        <input type="hidden" name="ownerId" value="@Model._Product.Id"/>
                                         <input type="hidden" name="productSlug" value="@Model._Product.Slug"/>
-                                        <input type="hidden" name="ProductId" value="@Model._Product.Id"/>
+                                        
                                         <div class="col-12">
                                             <input value="ارسال" type="submit">
                                         </div>

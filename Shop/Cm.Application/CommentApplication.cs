@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
+using Cm.Application.Contracts.Comment;
+using Cm.Domain.CommentAgg;
 using Shop.Application;
-using Sm.Application.Contracts.Comment;
-using Sm.Domain.CommentAgg;
 
-namespace Sm.Application
+namespace Cm.Application
 {
     public class CommentApplication : ICommentApplication
     {
@@ -21,7 +20,7 @@ namespace Sm.Application
             var operation = new OperationResult();
 
 
-            var comment = new Comment(command.Name, command.Email, command.Message, command.ProductId);
+            var comment = new Comment(command.Name, command.Email, command.Website, command.Message, command.OwnerId, command.Type, command.ParentId);
 
             _commentRepository.Create(comment);
             _commentRepository.SaveChanges();

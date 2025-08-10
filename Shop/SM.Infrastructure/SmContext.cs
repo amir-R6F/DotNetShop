@@ -1,6 +1,5 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
-using Sm.Domain.CommentAgg;
 using Sm.Domain.ProductAgg;
 using Sm.Domain.ProductCategoryAgg;
 using Sm.Domain.ProductPictureAgg;
@@ -18,8 +17,6 @@ namespace SM.Infrastructure
 
         public DbSet<Slider> Sliders { get; set; }
         
-        public DbSet<Comment> Comments { get; set; }
-
         public SmContext(DbContextOptions<SmContext> options) : base(options)
         {
         }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Cm.Infrastructure;
 using Dm.Infrastructure;
 using Im.Infrastructure;
 using Microsoft.EntityFrameworkCore;
@@ -17,13 +18,16 @@ namespace ShopQuery.Contracts.Query
         private readonly SmContext _context;
         private readonly InventoryContext _inventoryContext;
         private readonly DiscountContext _discountContext;
+        private readonly CommentContext _commentContext;
 
 
-        public ProductQuery(SmContext context, InventoryContext inventoryContext, DiscountContext discountContext)
+        public ProductQuery(SmContext context, InventoryContext inventoryContext, DiscountContext discountContext,
+            CommentContext commentContext)
         {
             _context = context;
             _inventoryContext = inventoryContext;
             _discountContext = discountContext;
+            _commentContext = commentContext;
         }
 
         public List<ProductQueryModel> GetLatestArrivals()
@@ -141,7 +145,6 @@ namespace ShopQuery.Contracts.Query
 
             var product = _context.Products
                 .Include(x => x.Category)
-                .Include(x => x.Comments)
                 .Include(x => x.ProductPictures)
                 .Select(x => new ProductQueryModel
                 {
@@ -158,10 +161,7 @@ namespace ShopQuery.Contracts.Query
                     Description = x.Description,
                     Code = x.Code,
                     Keywords = x.Keywords,
-                    Comments = CommentMapping(x.Comments)
-                    
-                    
-                    
+                    // Comments = CommentMapping(x.Comments)
                 }).FirstOrDefault(x => x.Slug == slug);
 
 
@@ -183,11 +183,24 @@ namespace ShopQuery.Contracts.Query
                 }
             }
 
+            product.Comments = _commentContext.Comments
+                .Where(x => !x.IsCanceled)
+                .Where(x => x.IsConfirmed)
+                .Where(x => x.Type == CommentsType.Product)
+                .Where(x => x.OwnerId == product.Id)
+                .Select(x => new CommentQueryModel
+                {
+                    Id = x.Id,
+                    Message = x.Message,
+                    Name = x.Name,
+                }).OrderByDescending(x => x.Id )
+                .ToList();
 
             return product;
         }
 
-        private static List<ProductPictureQueryModel> PictureMapping(List<Sm.Domain.ProductPictureAgg.ProductPicture> Pictures)
+        private static List<ProductPictureQueryModel> PictureMapping(
+            List<Sm.Domain.ProductPictureAgg.ProductPicture> Pictures)
         {
             return Pictures.Select(x => new ProductPictureQueryModel
             {
@@ -197,18 +210,18 @@ namespace ShopQuery.Contracts.Query
                 IsRemoved = x.IsRemoved
             }).ToList();
         }
-        
-        private static List<CommentQueryModel> CommentMapping(List<Sm.Domain.CommentAgg.Comment> Comments)
-        {
-            return Comments
-                .Where(x => !x.IsCanceled)
-                .Where(x => x.IsConfirmed)
-                .Select(x => new CommentQueryModel
-            {
-                Email = x.Email,
-                Message = x.Message,
-                Name = x.Name,
-            }).ToList();
-        }
+
+        // private static List<CommentQueryModel> CommentMapping(List<Sm.Domain.CommentAgg.Comment> Comments)
+        // {
+        //     return Comments
+        //         .Where(x => !x.IsCanceled)
+        //         .Where(x => x.IsConfirmed)
+        //         .Select(x => new CommentQueryModel
+        //     {
+        //         Email = x.Email,
+        //         Message = x.Message,
+        //         Name = x.Name,
+        //     }).ToList();
+        // }
     }
 }

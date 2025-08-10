@@ -1,18 +1,17 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
+using Cm.Application.Contracts.Comment;
+using Cm.Domain.CommentAgg;
 using Shop.Application;
 using Shop.Infrastructure;
-using Sm.Application.Contracts.Comment;
-using Sm.Domain.CommentAgg;
 
-namespace SM.Infrastructure.Repository
+namespace Cm.Infrastructure.Repository
 {
     public class CommentRepository : BaseRepository<long, Comment>, ICommentRepository
     {
-        private readonly SmContext _context;
+        private readonly CommentContext _context;
         
-        public CommentRepository(SmContext context) : base(context)
+        public CommentRepository(CommentContext context) : base(context)
         {
             _context = context;
         }
@@ -27,7 +26,6 @@ namespace SM.Infrastructure.Repository
                 Message = x.Message,
                 IsCanceled = x.IsCanceled,
                 IsConfirmed = x.IsConfirmed,
-                ProductId = x.ProductId,
                 CreationDate = x.CreationDate.ToFarsi()
             });
 

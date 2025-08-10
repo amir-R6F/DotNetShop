@@ -6,6 +6,8 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Bm.Configuration\Bm.Configuration.csproj" />
+      <ProjectReference Include="..\Cm.Application.Contracts\Cm.Application.Contracts.csproj" />
+      <ProjectReference Include="..\Cm.Configuration\Cm.Configuration.csproj" />
       <ProjectReference Include="..\Dm.Configuration\Dm.Configuration.csproj" />
       <ProjectReference Include="..\Im.Configuration\Im.Configuration.csproj" />
       <ProjectReference Include="..\ShopQuery\ShopQuery.csproj" />
@@ -27,6 +29,7 @@
 
     <ItemGroup>
       <_ContentIncludedByDefault Remove="Areas\Administrator\Pages\Comments\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Administrator\Pages\Shop\Comments\Index.cshtml" />
     </ItemGroup>
 
 </Project>

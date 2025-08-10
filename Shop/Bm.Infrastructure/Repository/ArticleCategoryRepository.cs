@@ -20,13 +20,16 @@ namespace Bm.Infrastructure.Repository
 
         public List<ArticleCategoryViewModel> Search(ArticleCategorySearchModel searchModel)
         {
-            var query = _context.ArticleCategories.Select(x => new ArticleCategoryViewModel
+            var query = _context.ArticleCategories
+                .Include(x => x.Articles)
+            .Select(x => new ArticleCategoryViewModel
             {
                 Id = x.Id,
                 Name = x.Name,
                 Description = x.Description,
                 Picture = x.Picture,
-                ShowOrder = x.ShowOrder
+                ShowOrder = x.ShowOrder,
+                ArticlesCount = x.Articles.Count
             });
 
             if (!string.IsNullOrWhiteSpace(searchModel.Name))

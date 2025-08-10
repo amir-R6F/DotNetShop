@@ -144,7 +144,6 @@ E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Co
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Search.cshtml.g.cs
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\ServiceHost.MvcApplicationPartsAssemblyInfo.cs
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Product.cshtml.g.cs
-E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Comments\Index.cshtml.g.cs
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Bm.Application.Contracts.dll
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Bm.Application.dll
@@ -162,3 +161,17 @@ E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administr
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Blogs\Article\Create.cshtml.g.cs
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Blogs\Article\Edit.cshtml.g.cs
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Blogs\Article\Index.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Shared\Components\LatestArticles\Default.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Article.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\ArticleCategory.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Cm.Application.Contracts.dll
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Cm.Application.Contracts.pdb
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Cm.Application.dll
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Cm.Configuration.dll
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Cm.Domain.dll
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Cm.Infrastructure.dll
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Cm.Configuration.pdb
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Cm.Application.pdb
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Cm.Domain.pdb
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Cm.Infrastructure.pdb
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Comments\Index.cshtml.g.cs

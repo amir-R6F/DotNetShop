@@ -1649,7 +1649,8 @@
           "Bm.Application": "1.0.0",
           "Bm.Domain": "1.0.0",
           "Bm.Infrastructure": "1.0.0",
-          "Microsoft.Extensions.DependencyInjection": "9.0.8"
+          "Microsoft.Extensions.DependencyInjection": "9.0.8",
+          "ShopQuery": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Bm.Configuration.dll": {}
@@ -1691,6 +1692,93 @@
         },
         "runtime": {
           "bin/placeholder/Bm.Infrastructure.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Cm.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Cm.Application.Contracts": "1.0.0",
+          "Cm.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Cm.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Cm.Application.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Cm.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Cm.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Cm.Application.Contracts.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Cm.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Cm.Application": "1.0.0",
+          "Cm.Application.Contracts": "1.0.0",
+          "Cm.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Cm.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Cm.Configuration.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Cm.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Cm.Application.Contracts": "1.0.0",
+          "Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Cm.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Cm.Domain.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Cm.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Cm.Domain": "1.0.0",
+          "Framework": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
+        },
+        "compile": {
+          "bin/placeholder/Cm.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Cm.Infrastructure.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -1895,6 +1983,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Bm.Infrastructure": "1.0.0",
+          "Cm.Infrastructure": "1.0.0",
           "Dm.Infrastructure": "1.0.0",
           "Im.Infrastructure": "1.0.0",
           "SM.Infrastructure": "1.0.0"
@@ -6409,6 +6499,31 @@
       "path": "../Bm.Infrastructure/Bm.Infrastructure.csproj",
       "msbuildProject": "../Bm.Infrastructure/Bm.Infrastructure.csproj"
     },
+    "Cm.Application/1.0.0": {
+      "type": "project",
+      "path": "../Cm.Application/Cm.Application.csproj",
+      "msbuildProject": "../Cm.Application/Cm.Application.csproj"
+    },
+    "Cm.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../Cm.Application.Contracts/Cm.Application.Contracts.csproj",
+      "msbuildProject": "../Cm.Application.Contracts/Cm.Application.Contracts.csproj"
+    },
+    "Cm.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../Cm.Configuration/Cm.Configuration.csproj",
+      "msbuildProject": "../Cm.Configuration/Cm.Configuration.csproj"
+    },
+    "Cm.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Cm.Domain/Cm.Domain.csproj",
+      "msbuildProject": "../Cm.Domain/Cm.Domain.csproj"
+    },
+    "Cm.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Cm.Infrastructure/Cm.Infrastructure.csproj",
+      "msbuildProject": "../Cm.Infrastructure/Cm.Infrastructure.csproj"
+    },
     "Dm.Application/1.0.0": {
       "type": "project",
       "path": "../Dm.Application/Dm.Application.csproj",
@@ -6498,6 +6613,8 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "Bm.Configuration >= 1.0.0",
+      "Cm.Application.Contracts >= 1.0.0",
+      "Cm.Configuration >= 1.0.0",
       "Dm.Configuration >= 1.0.0",
       "Im.Configuration >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.17",
@@ -6533,6 +6650,12 @@
           "projectReferences": {
             "E:\\1_PROJECTS\\DotNetShop\\Shop\\Bm.Configuration\\Bm.Configuration.csproj": {
               "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Bm.Configuration\\Bm.Configuration.csproj"
+            },
+            "E:\\1_PROJECTS\\DotNetShop\\Shop\\Cm.Application.Contracts\\Cm.Application.Contracts.csproj": {
+              "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Cm.Application.Contracts\\Cm.Application.Contracts.csproj"
+            },
+            "E:\\1_PROJECTS\\DotNetShop\\Shop\\Cm.Configuration\\Cm.Configuration.csproj": {
+              "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Cm.Configuration\\Cm.Configuration.csproj"
             },
             "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Configuration\\Dm.Configuration.csproj": {
               "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Dm.Configuration\\Dm.Configuration.csproj"
