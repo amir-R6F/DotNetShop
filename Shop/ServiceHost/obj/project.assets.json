@@ -1608,6 +1608,92 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Am.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Am.Application.Contracts": "1.0.0",
+          "Am.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Am.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Am.Application.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Am.Application.Contracts/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Am.Application.Contracts.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Am.Application.Contracts.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Am.Configuration/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Am.Application": "1.0.0",
+          "Am.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Am.Configuration.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Am.Configuration.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Am.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Am.Application.Contracts": "1.0.0",
+          "Framework": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Am.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Am.Domain.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Am.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Am.Domain": "1.0.0",
+          "Framework": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.17",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17"
+        },
+        "compile": {
+          "bin/placeholder/Am.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Am.Infrastructure.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Bm.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
@@ -6474,6 +6560,31 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Am.Application/1.0.0": {
+      "type": "project",
+      "path": "../Am.Application/Am.Application.csproj",
+      "msbuildProject": "../Am.Application/Am.Application.csproj"
+    },
+    "Am.Application.Contracts/1.0.0": {
+      "type": "project",
+      "path": "../Am.Application.Contracts/Am.Application.Contracts.csproj",
+      "msbuildProject": "../Am.Application.Contracts/Am.Application.Contracts.csproj"
+    },
+    "Am.Configuration/1.0.0": {
+      "type": "project",
+      "path": "../Am.Configuration/Am.Configuration.csproj",
+      "msbuildProject": "../Am.Configuration/Am.Configuration.csproj"
+    },
+    "Am.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Am.Domain/Am.Domain.csproj",
+      "msbuildProject": "../Am.Domain/Am.Domain.csproj"
+    },
+    "Am.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Am.Infrastructure/Am.Infrastructure.csproj",
+      "msbuildProject": "../Am.Infrastructure/Am.Infrastructure.csproj"
+    },
     "Bm.Application/1.0.0": {
       "type": "project",
       "path": "../Bm.Application/Bm.Application.csproj",
@@ -6612,6 +6723,7 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "Am.Configuration >= 1.0.0",
       "Bm.Configuration >= 1.0.0",
       "Cm.Application.Contracts >= 1.0.0",
       "Cm.Configuration >= 1.0.0",
@@ -6648,6 +6760,9 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
+            "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Configuration\\Am.Configuration.csproj": {
+              "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Configuration\\Am.Configuration.csproj"
+            },
             "E:\\1_PROJECTS\\DotNetShop\\Shop\\Bm.Configuration\\Bm.Configuration.csproj": {
               "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Bm.Configuration\\Bm.Configuration.csproj"
             },

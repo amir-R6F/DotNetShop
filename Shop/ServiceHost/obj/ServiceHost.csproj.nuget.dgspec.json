@@ -4,6 +4,329 @@
     "E:\\1_PROJECTS\\DotNetShop\\Shop\\ServiceHost\\ServiceHost.csproj": {}
   },
   "projects": {
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Application.Contracts\\Am.Application.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Application.Contracts\\Am.Application.Contracts.csproj",
+        "projectName": "Am.Application.Contracts",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Application.Contracts\\Am.Application.Contracts.csproj",
+        "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Application.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Application\\Am.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Application\\Am.Application.csproj",
+        "projectName": "Am.Application",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Application\\Am.Application.csproj",
+        "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Application.Contracts\\Am.Application.Contracts.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Application.Contracts\\Am.Application.Contracts.csproj"
+              },
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Domain\\Am.Domain.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Domain\\Am.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Configuration\\Am.Configuration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Configuration\\Am.Configuration.csproj",
+        "projectName": "Am.Configuration",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Configuration\\Am.Configuration.csproj",
+        "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Configuration\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Application\\Am.Application.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Application\\Am.Application.csproj"
+              },
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Infrastructure\\Am.Infrastructure.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Infrastructure\\Am.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Domain\\Am.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Domain\\Am.Domain.csproj",
+        "projectName": "Am.Domain",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Domain\\Am.Domain.csproj",
+        "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Application.Contracts\\Am.Application.Contracts.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Application.Contracts\\Am.Application.Contracts.csproj"
+              },
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Infrastructure\\Am.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Infrastructure\\Am.Infrastructure.csproj",
+        "projectName": "Am.Infrastructure",
+        "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Infrastructure\\Am.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\AATRIANLLC\\.nuget\\packages\\",
+        "outputPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AATRIANLLC\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Domain\\Am.Domain.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Domain\\Am.Domain.csproj"
+              },
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Framework\\Framework.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "E:\\1_PROJECTS\\DotNetShop\\Shop\\Bm.Application.Contracts\\Bm.Application.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -1425,6 +1748,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Configuration\\Am.Configuration.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Configuration\\Am.Configuration.csproj"
+              },
               "E:\\1_PROJECTS\\DotNetShop\\Shop\\Bm.Configuration\\Bm.Configuration.csproj": {
                 "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Bm.Configuration\\Bm.Configuration.csproj"
               },

@@ -4,6 +4,7 @@
     {
         public const string Duplicate = "رکورد وارد شده تکراری میباشد.";
         public const string NotFound = "رکورد وارد شده یافت نشد.";
+        public const string NotMatch = "گذرواژه ها همخوانی ندارند.";
 
     }
 }
