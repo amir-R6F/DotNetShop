@@ -62,5 +62,10 @@ namespace Am.Infrastructure.Repository
                     
                 }).FirstOrDefault(x => x.Id == id);
         }
+
+        public Account GetBy(string username)
+        {
+            return _context.Accounts.FirstOrDefault(x=> x.Username == username);
+        }
     }
 }

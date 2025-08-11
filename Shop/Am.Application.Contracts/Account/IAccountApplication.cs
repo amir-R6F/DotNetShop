@@ -9,8 +9,10 @@ namespace Am.Application.Contracts.Account
         OperationResult Edit(EditAccount command);
         List<AccountViewModel> Search(AccountSearchModel searchModel);
         EditAccount GetDetails(long id);
-
         OperationResult ChangePassword(ChangePassword command);
+        OperationResult Login(Login command);
+
+        void Logout();
 
     }
 }

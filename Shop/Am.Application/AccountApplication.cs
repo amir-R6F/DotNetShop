@@ -10,13 +10,15 @@ namespace Am.Application
         private readonly IPasswordHasher _hasher;
         private readonly IAccountRepository _accountRepository;
         private readonly IFileUploader _fileUploader;
+        private readonly IAuthHelper _authHelper;
 
 
-        public AccountApplication(IPasswordHasher hasher, IAccountRepository accountRepository, IFileUploader fileUploader)
+        public AccountApplication(IPasswordHasher hasher, IAccountRepository accountRepository, IFileUploader fileUploader, IAuthHelper authHelper)
         {
             _hasher = hasher;
             _accountRepository = accountRepository;
             _fileUploader = fileUploader;
+            _authHelper = authHelper;
         }
 
         public OperationResult ChangePassword(ChangePassword command)
@@ -39,7 +41,34 @@ namespace Am.Application
             return operation.Succedded();
 
         }
-        
+
+        public OperationResult Login(Login command)
+        {
+            var operation = new OperationResult();
+            var account = _accountRepository.GetBy(command.UserName);
+
+            if (account == null)
+                return operation.Failed(ApplicationMessages.WrongUserPass);
+
+            (bool verified , bool NeedsUpgrade) res = _hasher.Check(account.Password, command.Password);
+
+            if (!res.verified)
+                return operation.Failed(ApplicationMessages.WrongUserPass);
+
+            var authViewModel = new AuthViewModel(account.Id, account.RoleId, account.Fullname, account.Username);
+            _authHelper.SignIn(authViewModel);
+            
+            return operation.Succedded();
+
+
+
+        }
+
+        public void Logout()
+        {
+            _authHelper.SingOut();
+        }
+
         public OperationResult Create(CreateAccount command)
         {
             var operation = new OperationResult();

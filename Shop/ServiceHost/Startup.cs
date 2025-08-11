@@ -9,8 +9,10 @@ using Bm.Configuration;
 using Cm.Configuration;
 using Dm.Configuration;
 using Im.Configuration;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,6 +35,8 @@ namespace ServiceHost
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddHttpContextAccessor();
+            
             var Connectionstring = Configuration.GetConnectionString("LampShop");
             
             Bootstrapper.configuration(services, Connectionstring);
@@ -46,8 +50,23 @@ namespace ServiceHost
 
             services.AddTransient<IFileUploader, FileUploader>();
             services.AddTransient<IPasswordHasher, PasswordHasher>();
-            
-            
+            services.AddTransient<IAuthHelper, AuthHelper>();
+
+            //Cookie policy part 
+            services.Configure<CookiePolicyOptions>(option =>
+            {
+                option.CheckConsentNeeded = context => true;
+                option.MinimumSameSitePolicy = SameSiteMode.Strict;
+            });
+
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, opt =>
+                {
+                    opt.LoginPath = new PathString("/Account");
+                    opt.LogoutPath = new PathString("/Account");
+                    opt.AccessDeniedPath = new PathString("/AccessDenied");
+                });
+            // end of cookie policy
             services.AddRazorPages();
         }
 
@@ -65,11 +84,18 @@ namespace ServiceHost
                 app.UseHsts();
             }
 
+            //cookie 
+            app.UseAuthentication();
+            
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            //cookie
+            app.UseCookiePolicy();
+            
             app.UseRouting();
 
+            //cookie
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints => { endpoints.MapRazorPages(); });
