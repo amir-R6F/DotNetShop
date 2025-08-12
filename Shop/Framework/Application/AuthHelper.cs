@@ -5,6 +5,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
+using Shop.Domain;
 
 namespace Shop.Application
 {
@@ -22,6 +23,29 @@ namespace Shop.Application
         {
             var claims = _contextAccessor.HttpContext.User.Claims.ToList();
             return claims.Count > 0;
+        }
+
+        public string CurrentAccountRole()
+        {
+            if (IsAuthenticated())
+                return _contextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Role).Value;
+            
+            return null;
+        }
+
+        public AuthViewModel CurrentAccountInfo()
+        {
+            var res = new AuthViewModel();
+            if (!IsAuthenticated())
+                return res;
+
+            var claims = _contextAccessor.HttpContext.User.Claims.ToList();
+            res.Id = long.Parse(claims.FirstOrDefault(x => x.Type == "AccountId").Value);
+            res.Username = claims.FirstOrDefault(x => x.Type == "Username").Value;
+            res.RoleId = long.Parse(claims.FirstOrDefault(x => x.Type == ClaimTypes.Role).Value);
+            res.FullName = claims.FirstOrDefault(x => x.Type == ClaimTypes.Name).Value;
+            res.Role = Rules.GetRuleBy(res.Id);
+            return res;
         }
 
         public void SingOut()

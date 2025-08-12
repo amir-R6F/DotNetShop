@@ -1,11 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Sm.Application.Contracts.ProductCategory;
 
 namespace ServiceHost.Areas.Administrator.Pages.Shop.ProductCategory
 {
+    // [Authorize(Roles = "1, 3")]
     public class Index : PageModel
     {
         private readonly IProductCategoryApplication _productCategoryApplication;

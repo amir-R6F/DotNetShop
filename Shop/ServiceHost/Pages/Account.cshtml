@@ -71,10 +71,10 @@
                                 </form>
                             </div>
                             <div class="col-sm-12 col-md-12 col-lg-6 col-xs-12">
-                                @* @if (Model.RegisterMessage != null) *@
-                                @* { *@
-                                @*     <div class="alert alert-danger">@Model.RegisterMessage</div> *@
-                                @* } *@
+                                @if (Model.RegisterMessage != null)
+                                {
+                                    <div class="alert alert-danger">@Model.RegisterMessage</div>
+                                }
                                 <form method="post" asp-page-handler="Register">
                                     <div class="login-form">
                                         <h4 class="login-title">ثبت نام</h4>

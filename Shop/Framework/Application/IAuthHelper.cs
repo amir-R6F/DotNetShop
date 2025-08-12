@@ -6,6 +6,9 @@
 
         bool IsAuthenticated();
         void SingOut();
+        string CurrentAccountRole();
+
+        AuthViewModel CurrentAccountInfo();
     }
     
 }

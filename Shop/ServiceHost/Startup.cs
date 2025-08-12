@@ -18,8 +18,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Shop.Application;
+using Shop.Domain;
 using Sm.Configuration;
-using SM.Infrastructure;
 
 namespace ServiceHost
 {
@@ -67,7 +67,33 @@ namespace ServiceHost
                     opt.AccessDeniedPath = new PathString("/AccessDenied");
                 });
             // end of cookie policy
-            services.AddRazorPages();
+            
+            services.AddAuthorization(option =>
+            {
+                option.AddPolicy("AdminArea",
+                    builder => builder.RequireRole(new List<string> { "1", "3" }));
+
+                option.AddPolicy("Shop",
+                    builder => builder.RequireRole(new List<string> { "1" }));
+                
+                option.AddPolicy("Discounts",
+                    builder => builder.RequireRole(new List<string> { Rules.Administrator }));
+                
+                option.AddPolicy("Accounts",
+                    builder => builder.RequireRole(new List<string> { Rules.Administrator }));
+
+            });
+            
+            services.AddRazorPages()
+                .AddRazorPagesOptions(option =>
+                {
+                    option.Conventions.AuthorizeAreaFolder("Administrator", "/", "AdminArea");
+                    option.Conventions.AuthorizeAreaFolder("Administrator", "/Shop", "Shop");
+                    option.Conventions.AuthorizeAreaFolder("Administrator", "/Discounts", "Accounts");
+                    option.Conventions.AuthorizeAreaFolder("Administrator", "/Accounts", "Discounts");
+                });
+            
+            // services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

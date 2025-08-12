@@ -25,6 +25,8 @@ namespace Am.Domain.AccountAgg
             Username = username;
             Password = password;
             Mobile = mobile;
+            if(roleId == 0)
+                RoleId = 2;
             RoleId = roleId;
             ProfilePhoto = profilePhoto;
         }
