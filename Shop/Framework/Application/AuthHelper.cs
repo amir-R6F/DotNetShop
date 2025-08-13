@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Shop.Domain;
 
 namespace Shop.Application
@@ -21,8 +24,9 @@ namespace Shop.Application
 
         public bool IsAuthenticated()
         {
-            var claims = _contextAccessor.HttpContext.User.Claims.ToList();
-            return claims.Count > 0;
+            // var claims = _contextAccessor.HttpContext.User.Claims.ToList();
+            // return claims.Count > 0;
+            return _contextAccessor.HttpContext.User.Identity.IsAuthenticated; 
         }
 
         public string CurrentAccountRole()
@@ -48,6 +52,16 @@ namespace Shop.Application
             return res;
         }
 
+        public List<int> GetPermissions()
+        {
+            if (!IsAuthenticated())
+                return new List<int>();
+            
+            var permissions = _contextAccessor.HttpContext.User.Claims
+                .FirstOrDefault(x => x.Type == "Permissions")?.Value;
+            return JsonConvert.DeserializeObject<List<int>>(permissions);
+        }
+
         public void SingOut()
         {
             _contextAccessor.HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
@@ -55,12 +69,14 @@ namespace Shop.Application
 
         public void SignIn(AuthViewModel account)
         {
+            var permissions = JsonConvert.SerializeObject(account.Permissions);
             var claims = new List<Claim>
             {
                 new Claim("AccountId", account.Id.ToString()),
                 new Claim(ClaimTypes.Name, account.FullName),
                 new Claim(ClaimTypes.Role, account.RoleId.ToString()),
                 new Claim("Username", account.Username),
+                new Claim("Permissions", permissions),
             };
 
             var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);

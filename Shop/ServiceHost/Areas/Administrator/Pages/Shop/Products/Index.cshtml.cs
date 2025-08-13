@@ -3,8 +3,10 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Shop.Infrastructure;
 using Sm.Application.Contracts.Product;
 using Sm.Application.Contracts.ProductCategory;
+using Sm.Configuration.Permissions;
 
 namespace ServiceHost.Areas.Administrator.Pages.Shop.Products
 {
@@ -19,13 +21,14 @@ namespace ServiceHost.Areas.Administrator.Pages.Shop.Products
         public List<ProductViewModel> products;
         public ProductSearchModel SearchModel;
 
-
+        
         public Index(IProductApplication productApplication, IProductCategoryApplication categoryApplication)
         {
             _productApplication = productApplication;
             _categoryApplication = categoryApplication;
         }
-
+        
+        [NeedsPermission(ShopPermission.ListProducts)]
         public void OnGet(ProductSearchModel searchModel)
         {
             Categories = new SelectList(_categoryApplication.GetCategories(), "Id", "Name");

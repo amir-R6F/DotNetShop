@@ -1,4 +1,5 @@
 ﻿using Am.Domain.RoleAgg;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -16,6 +17,14 @@ namespace Am.Infrastructure.Mapping
             builder.HasMany(x => x.Accounts)
                 .WithOne(x => x.Role)
                 .HasForeignKey(x => x.RoleId);
+
+            builder.OwnsMany(x => x.Permissions, 
+                NavigationBuilder =>
+                {
+                    NavigationBuilder.HasKey(x => x.Id);
+                    NavigationBuilder.ToTable("RolePermissions");
+                    NavigationBuilder.WithOwner(x => x.Role);
+                });
         }
     }
 }

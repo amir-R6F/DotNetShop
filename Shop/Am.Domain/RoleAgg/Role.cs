@@ -8,15 +8,24 @@ namespace Am.Domain.RoleAgg
     {
         public string Name { get; private set; }
         public List<Account> Accounts { get; private set; }
+        public List<Permission> Permissions { get; private set; }
 
-        public Role(string name)
+
+        protected Role()
         {
-            Name = name;
+            
         }
         
-        public void Edit(string name)
+        public Role(string name, List<Permission> permissions)
         {
             Name = name;
+            Permissions = permissions;
+        }
+        
+        public void Edit(string name, List<Permission> permissions)
+        {
+            Name = name;
+            Permissions = permissions; 
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿namespace Shop.Application
+﻿using System.Collections.Generic;
+
+namespace Shop.Application
 {
     public interface IAuthHelper
     {
@@ -9,6 +11,8 @@
         string CurrentAccountRole();
 
         AuthViewModel CurrentAccountInfo();
+
+        List<int> GetPermissions();
     }
     
 }
