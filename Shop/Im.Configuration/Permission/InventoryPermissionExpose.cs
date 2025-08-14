@@ -16,6 +16,9 @@ namespace Im.Configuration.Permission
                         new PermissionDto(51, "SearchInventory"),
                         new PermissionDto(52, "CreateInventory"),
                         new PermissionDto(53, "EditInventory"), 
+                        new PermissionDto(54, "IncreaseInventory"), 
+                        new PermissionDto(55, "DecreaseInventory"), 
+                        new PermissionDto(56, "LogInventory"), 
                     }
                 }
             };

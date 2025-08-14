@@ -20,7 +20,7 @@ using ServiceHost;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fa7be366ee064e57cefedf53161eba995559c242", @"/Areas/Administrator/Pages/Shop/Products/Edit.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9ba3a616263e71912cf9bb083ea9fc9a6035b856", @"/Areas/Administrator/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ba8a0bbc621ccba65c8a3eac83b5858b61838ff0", @"/Areas/Administrator/Pages/_ViewImports.cshtml")]
     public class Areas_Administrator_Pages_Shop_Products_Edit : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Sm.Application.Contracts.Product.EditProduct>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("control-label"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
