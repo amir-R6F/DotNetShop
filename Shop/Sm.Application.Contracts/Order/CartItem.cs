@@ -13,6 +13,9 @@ namespace Sm.Application.Contracts.Order
         public double TotalItemsPrice { get; set; }
         
         public bool InStock { get; set; }
+        public int DiscountRate { get; set; }
+        public double DiscountAmount { get; set; }
+        public double ItemPayAmount { get; set; }
 
         public void CalculateTotal()
         {

@@ -5,6 +5,7 @@
         public const string Administrator = "1";
         public const string Systemuser = "2";
         public const string ContentUploader = "3";
+        public const string Colleague = "4";
 
         public static string GetRuleBy(long id)
         {

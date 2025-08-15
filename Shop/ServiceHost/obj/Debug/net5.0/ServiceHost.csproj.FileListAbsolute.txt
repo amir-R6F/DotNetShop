@@ -199,3 +199,4 @@ E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Microsoft.DotNet.Plat
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.DependencyModel.dll
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Microsoft.Extensions.PlatformAbstractions.dll
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Nancy.dll
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\Checkout.cshtml.g.cs
