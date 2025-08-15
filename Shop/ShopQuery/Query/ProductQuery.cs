@@ -9,6 +9,7 @@ using Shop.Application;
 using ShopQuery.Contracts.Comment;
 using ShopQuery.Contracts.Product;
 using ShopQuery.Contracts.ProductPicture;
+using Sm.Application.Contracts.Order;
 using SM.Infrastructure;
 
 namespace ShopQuery.Contracts.Query
@@ -209,6 +210,24 @@ namespace ShopQuery.Contracts.Query
                 PictureTitle = x.PictureTitle,
                 IsRemoved = x.IsRemoved
             }).ToList();
+        }
+
+        public List<CartItem> CheckProductCount(List<CartItem> cartItems)
+        {
+            var inventory = _inventoryContext.Inventory.ToList();
+            
+            foreach (var cartitem in cartItems.Where(cartitem => 
+                inventory.Any(x =>
+                x.ProductId == cartitem.Id &&
+                x.InStock)))
+            {
+                var iteminventory = inventory.Find(x => x.ProductId == cartitem.Id);
+                cartitem.InStock = iteminventory.CalculateCurrentCount() >= cartitem.Count;
+                
+                
+            }
+
+            return cartItems;
         }
 
         // private static List<CommentQueryModel> CommentMapping(List<Sm.Domain.CommentAgg.Comment> Comments)
