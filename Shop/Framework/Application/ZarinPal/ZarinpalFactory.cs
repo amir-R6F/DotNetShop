@@ -25,29 +25,32 @@ namespace Shop.Application.ZarinPal
 
         public string Prefix { get; set; }
 
-        public PaymentResponse CreatePaymentRequest(string amount, string mobile, string email, string description,
-            long orderId)
+        public PaymentResponse CreatePaymentRequest(string amount, string mobile, string email, string description, long orderId)
         {
-            amount = amount.Replace(",", "");
+            amount = Regex.Replace(amount, @"\D", "");
+
             var finalAmount = int.Parse(amount);
             var siteUrl = _configuration.GetSection("payment")["siteUrl"];
 
-            var client = new RestClient(_baseUrl);
-            //var request = new RestRequest(Method.POST);
-            var request = new RestRequest("PaymentRequest.json", Method.Post);
-            request.AddHeader("Content-Type", "application/json");
-            var body = new PaymentRequest
-            {
-                Mobile = mobile,
-                CallbackURL = $"{siteUrl}/Checkout?handler=CallBack&oId={orderId}",
-                Description = description,
-                Email = email,
-                Amount = finalAmount,
-                MerchantID = MerchantId
-            };
 
-            request.AddJsonBody(body);
+            var body = new 
+            {
+                merchant_id  = MerchantId,
+                amount = finalAmount,
+                callback_url = $"{siteUrl}/Checkout?handler=CallBack&oId={orderId}",
+                description = description,
+                email = email,
+                mobile = mobile
+            };
+            var json = JsonConvert.SerializeObject(body);
+
+            var client = new RestClient(_baseUrl);
+            var request = new RestRequest("request.json", Method.Post);
+            request.AddHeader("Content-Type", "application/json");
+            request.AddParameter("application/json", json, ParameterType.RequestBody);
+            
             var response = client.Execute(request);
+            
             return JsonConvert.DeserializeObject<PaymentResponse>(response.Content);
         }
 
