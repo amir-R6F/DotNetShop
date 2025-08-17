@@ -22,17 +22,19 @@ namespace ServiceHost
 
         public void OnPageHandlerExecuting(PageHandlerExecutingContext context)
         {
-            var RequiredPermission = 
-                (NeedsPermissionAttribute) context.HandlerMethod.MethodInfo.GetCustomAttribute(typeof(NeedsPermissionAttribute));
+            var requiredPermissionAttribute = context.HandlerMethod?.MethodInfo
+                ?.GetCustomAttribute(typeof(NeedsPermissionAttribute)) as NeedsPermissionAttribute;
 
-            var UserPermissions = _authHelper.GetPermissions();
+            if (requiredPermissionAttribute == null)
+                return; // No permission required — skip check
 
-            if (RequiredPermission == null)
-                return;
-            
-            if (UserPermissions.All(permission=> permission != RequiredPermission.Permission))
+            var requiredPermission = requiredPermissionAttribute.Permission;
+            var userPermissions = _authHelper.GetPermissions();
+
+            if (userPermissions.All(p => p != requiredPermission))
+            {
                 context.HttpContext.Response.Redirect("/Account");
-
+            }
         }
 
         public void OnPageHandlerExecuted(PageHandlerExecutedContext context)
@@ -41,3 +43,16 @@ namespace ServiceHost
         }
     }
 }
+
+// var RequiredPermission = 
+//     (NeedsPermissionAttribute) context.HandlerMethod.MethodInfo.GetCustomAttribute(typeof(NeedsPermissionAttribute));
+//
+// if (RequiredPermission == null)
+//     return;
+//             
+// var UserPermissions = _authHelper.GetPermissions();
+//
+//
+//             
+// if (UserPermissions.All(permission=> permission != RequiredPermission.Permission))
+//     context.HttpContext.Response.Redirect("/Account");

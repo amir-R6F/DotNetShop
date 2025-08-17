@@ -18,6 +18,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Shop.Application;
+using Shop.Application.ZarinPal;
 using Shop.Domain;
 using Sm.Configuration;
 
@@ -51,6 +52,7 @@ namespace ServiceHost
             services.AddTransient<IFileUploader, FileUploader>();
             services.AddTransient<IPasswordHasher, PasswordHasher>();
             services.AddTransient<IAuthHelper, AuthHelper>();
+            services.AddTransient<IZarinPalFactory, ZarinPalFactory>();
 
             //Cookie policy part 
             services.Configure<CookiePolicyOptions>(option =>

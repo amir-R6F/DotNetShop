@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
+using Sm.Domain.OrderAgg;
 using Sm.Domain.ProductAgg;
 using Sm.Domain.ProductCategoryAgg;
 using Sm.Domain.ProductPictureAgg;
@@ -16,7 +17,8 @@ namespace SM.Infrastructure
         public DbSet<ProductPicture> ProductPictures { get; set; }
 
         public DbSet<Slider> Sliders { get; set; }
-        
+        public DbSet<Order> Orders { get; set; }
+
         public SmContext(DbContextOptions<SmContext> options) : base(options)
         {
         }

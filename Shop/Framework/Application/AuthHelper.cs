@@ -26,15 +26,23 @@ namespace Shop.Application
         {
             // var claims = _contextAccessor.HttpContext.User.Claims.ToList();
             // return claims.Count > 0;
-            return _contextAccessor.HttpContext.User.Identity.IsAuthenticated; 
+            return _contextAccessor.HttpContext.User.Identity.IsAuthenticated;
         }
 
         public string CurrentAccountRole()
         {
             if (IsAuthenticated())
                 return _contextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type == ClaimTypes.Role).Value;
-            
+
             return null;
+        }
+
+        public long CurrentAccountId()
+        {
+            if (IsAuthenticated())
+                return long.Parse(_contextAccessor.HttpContext.User.Claims.FirstOrDefault(x => x.Type == "AccountId")
+                    .Value);
+            return 0;
         }
 
         public AuthViewModel CurrentAccountInfo()
@@ -56,11 +64,12 @@ namespace Shop.Application
         {
             if (!IsAuthenticated())
                 return new List<int>();
-            
+
             var permissions = _contextAccessor.HttpContext.User.Claims
                 .FirstOrDefault(x => x.Type == "Permissions")?.Value;
             return JsonConvert.DeserializeObject<List<int>>(permissions);
         }
+
 
         public void SingOut()
         {
@@ -90,9 +99,6 @@ namespace Shop.Application
                 CookieAuthenticationDefaults.AuthenticationScheme,
                 new ClaimsPrincipal(claimsIdentity),
                 authProperties);
-
         }
-
-
     }
 }
