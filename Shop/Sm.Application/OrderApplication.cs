@@ -15,17 +15,18 @@ namespace Sm.Application
         private readonly IConfiguration _configuration;
 
 
-        public OrderApplication(IAuthHelper authHelper, IOrderRepository orderRepository)
+        public OrderApplication(IAuthHelper authHelper, IOrderRepository orderRepository, IConfiguration configuration)
         {
             _authHelper = authHelper;
             _orderRepository = orderRepository;
+            _configuration = configuration;
         }
 
         public long PlaceOrder(myCart cart)
         {
             var currentAccountId = _authHelper.CurrentAccountId();
             
-            var order = new Order(currentAccountId, cart.TotalAmount, cart.DiscountAmount, cart.PayAmount);
+            var order = new Order(currentAccountId, cart.PaymentMethod, cart.TotalAmount, cart.DiscountAmount, cart.PayAmount);
             foreach (var cartItem in cart.Items)
             {
                 var price = Regex.Replace(cartItem.UnitPrice, @"\D", "");
@@ -38,7 +39,7 @@ namespace Sm.Application
             return order.Id;
         }
 
-        public void PaymentSucceeded(long orderId, long refId)
+        public string PaymentSucceeded(long orderId, long refId)
         {
             var order = _orderRepository.Get(orderId);
             order.PaymentSucceeded(refId);
@@ -47,7 +48,12 @@ namespace Sm.Application
             order.SetIssueTrackingNum(issueTrackingNum);
             // reduce orderItems from Inventory
             _orderRepository.SaveChanges();
+            return issueTrackingNum;
+        }
 
+        public double GetAmountBy(long id)
+        {
+            return _orderRepository.GetAmountBy(id);
         }
     }
 }

@@ -4,6 +4,12 @@ namespace Sm.Application.Contracts.Order
 {
     public class myCart
     {
+        public double TotalAmount { get; set; }
+        public double DiscountAmount { get; set; }
+        public double PayAmount { get; set; }
+        public int PaymentMethod { get; set; }
+        
+        public List<CartItem> Items { get; set; }
         public myCart()
         {
             Items = new List<CartItem>();
@@ -17,9 +23,11 @@ namespace Sm.Application.Contracts.Order
             PayAmount += cartItem.ItemPayAmount;
         }
 
-        public double TotalAmount { get; set; }
-        public double DiscountAmount { get; set; }
-        public double PayAmount { get; set; }
-        public List<CartItem> Items { get; set; }
+        public void SetPaymentMethod(int methodId)
+        {
+            PaymentMethod = methodId;
+        }
+
+
     }
 }

@@ -58,7 +58,7 @@ namespace ServiceHost
             services.Configure<CookiePolicyOptions>(option =>
             {
                 option.CheckConsentNeeded = context => true;
-                option.MinimumSameSitePolicy = SameSiteMode.Strict;
+                option.MinimumSameSitePolicy = SameSiteMode.Lax; // use cookie on other sites
             });
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

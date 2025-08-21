@@ -57,20 +57,28 @@ namespace Shop.Application.ZarinPal
         public VerificationResponse CreateVerificationRequest(string authority, string amount)
         {
             var client = new RestClient(_baseUrl);
-            var request = new RestRequest("PaymentVerification.json", Method.Post);
+            var request = new RestRequest("verify.json", Method.Post);
             request.AddHeader("Content-Type", "application/json");
 
             amount = amount.Replace(",", "");
             var finalAmount = int.Parse(amount);
 
-            request.AddJsonBody(new VerificationRequest
+            var body = new
             {
-                Amount = finalAmount,
-                MerchantID = MerchantId,
-                Authority = authority
-            });
-
+                merchant_id = MerchantId,
+                amount = finalAmount,
+                authority = authority
+            };
+            
+            var json = JsonConvert.SerializeObject(body);
+            request.AddParameter("application/json", json, ParameterType.RequestBody);
+            
             var response = client.Execute(request);
+            
+            Console.WriteLine("Raw Response:");
+            Console.WriteLine(response.Content);
+            Console.WriteLine("HTTP Status Code: " + response.StatusCode);
+
             return JsonConvert.DeserializeObject<VerificationResponse>(response.Content);
         }
     }

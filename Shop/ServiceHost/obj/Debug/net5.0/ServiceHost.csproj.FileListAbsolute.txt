@@ -206,3 +206,4 @@ E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\System.Runtime.Compil
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\System.Text.Encodings.Web.dll
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\System.Text.Json.dll
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\test.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\PaymentResult.cshtml.g.cs
