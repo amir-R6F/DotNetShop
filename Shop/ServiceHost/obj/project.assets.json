@@ -2788,6 +2788,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
+          "Am.Infrastructure": "1.0.0",
           "Im.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.17",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.17",
@@ -2818,6 +2819,23 @@
         },
         "runtime": {
           "bin/placeholder/ShopQuery.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Sm.Acl/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Im.Application.Contracts": "1.0.0",
+          "Sm.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sm.Acl.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sm.Acl.dll": {}
         },
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
@@ -2864,6 +2882,7 @@
           "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
           "SM.Infrastructure": "1.0.0",
           "ShopQuery": "1.0.0",
+          "Sm.Acl": "1.0.0",
           "Sm.Domain": "1.0.0"
         },
         "compile": {
@@ -8697,6 +8716,11 @@
       "type": "project",
       "path": "../ShopQuery/ShopQuery.csproj",
       "msbuildProject": "../ShopQuery/ShopQuery.csproj"
+    },
+    "Sm.Acl/1.0.0": {
+      "type": "project",
+      "path": "../Sm.Acl/Sm.Acl.csproj",
+      "msbuildProject": "../Sm.Acl/Sm.Acl.csproj"
     },
     "Sm.Application/1.0.0": {
       "type": "project",

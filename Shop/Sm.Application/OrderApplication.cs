@@ -5,6 +5,7 @@ using Shop.Application;
 using Shop.Application.ZarinPal;
 using Sm.Application.Contracts.Order;
 using Sm.Domain.OrderAgg;
+using Sm.Domain.Services;
 
 namespace Sm.Application
 {
@@ -13,13 +14,16 @@ namespace Sm.Application
         private readonly IAuthHelper _authHelper;
         private readonly IOrderRepository _orderRepository;
         private readonly IConfiguration _configuration;
+        private readonly IShopInventoryAcl _acl;
+        
 
 
-        public OrderApplication(IAuthHelper authHelper, IOrderRepository orderRepository, IConfiguration configuration)
+        public OrderApplication(IAuthHelper authHelper, IOrderRepository orderRepository, IConfiguration configuration, IShopInventoryAcl acl)
         {
             _authHelper = authHelper;
             _orderRepository = orderRepository;
             _configuration = configuration;
+            _acl = acl;
         }
 
         public long PlaceOrder(myCart cart)
@@ -46,9 +50,15 @@ namespace Sm.Application
             var symbol = _configuration.GetValue<string>("Symbol");
             var issueTrackingNum = CodeGenerator.Generate(symbol);
             order.SetIssueTrackingNum(issueTrackingNum);
-            // reduce orderItems from Inventory
-            _orderRepository.SaveChanges();
-            return issueTrackingNum;
+
+            if (_acl.ReduceFromInventory(order.Items))
+            {
+                _orderRepository.SaveChanges();
+                return issueTrackingNum;                
+            }
+
+            return "";
+
         }
 
         public double GetAmountBy(long id)

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Am.Infrastructure;
 using Im.Application.Contracts.Inventory;
 using Im.Domain.InventoryAgg;
 using Microsoft.EntityFrameworkCore;
@@ -13,12 +14,14 @@ namespace Im.Infrastructure.Repository
     {
         private readonly InventoryContext _context;
         private readonly SmContext _smContext;
-        
-        public InventoryRepository(InventoryContext context, SmContext smContext) : base(context)
+        private readonly AccountContext _accountContext;
+
+        public InventoryRepository(InventoryContext context, SmContext smContext, AccountContext accountContext) :
+            base(context)
         {
             _context = context;
             _smContext = smContext;
-
+            _accountContext = accountContext;
         }
 
         public EditInventory GetDetails(long id)
@@ -51,9 +54,9 @@ namespace Im.Infrastructure.Repository
                 query = query.Where(x => x.ProductId == searchModel.ProductId);
 
             var inventoy = query.OrderByDescending(x => x.Id).ToList();
-            
-            inventoy.ForEach(item => 
-                item.Product = products.FirstOrDefault(x=> x.Id == item.ProductId)?.Name);
+
+            inventoy.ForEach(item =>
+                item.Product = products.FirstOrDefault(x => x.Id == item.ProductId)?.Name);
 
             return inventoy;
         }
@@ -65,9 +68,11 @@ namespace Im.Infrastructure.Repository
 
         public List<InventoryOprationViewModel> GetLog(long inventoryId)
         {
+            var account = _accountContext.Accounts.Select(x => new { x.Id, x.Fullname }).ToList();
+
             var inventory = _context.Inventory.FirstOrDefault(x => x.Id == inventoryId);
-            
-                return inventory.InvOperations.Select(x => new InventoryOprationViewModel
+
+            var logs = inventory.InvOperations.Select(x => new InventoryOprationViewModel
             {
                 Id = x.Id,
                 Count = x.Count,
@@ -76,10 +81,16 @@ namespace Im.Infrastructure.Repository
                 Operation = x.Operation,
                 CurrentCount = x.CurrentCount,
                 OperatorId = x.OperatorId,
-                OperatorName = "admin",
+                // OperatorName = "admin",
                 OperationDate = x.OperationDate.ToFarsi()
-                
             }).ToList();
+
+            foreach (var log in logs)
+            {
+                log.OperatorName = account.FirstOrDefault(x => x.Id == log.OperatorId)?.Fullname;
+            }
+
+            return logs;
         }
     }
 }
