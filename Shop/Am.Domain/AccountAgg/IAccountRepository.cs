@@ -10,5 +10,7 @@ namespace Am.Domain.AccountAgg
         EditAccount GetDetails(long id);
 
         Account GetBy(string username);
+
+        List<AccountViewModel> GetAccounts();
     }
 }

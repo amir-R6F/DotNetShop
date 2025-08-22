@@ -2250,6 +2250,9 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
+              "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Infrastructure\\Am.Infrastructure.csproj": {
+                "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Am.Infrastructure\\Am.Infrastructure.csproj"
+              },
               "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application\\Sm.Application.csproj": {
                 "projectPath": "E:\\1_PROJECTS\\DotNetShop\\Shop\\Sm.Application\\Sm.Application.csproj"
               },

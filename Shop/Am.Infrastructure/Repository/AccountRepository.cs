@@ -67,5 +67,14 @@ namespace Am.Infrastructure.Repository
         {
             return _context.Accounts.FirstOrDefault(x=> x.Username == username);
         }
+
+        public List<AccountViewModel> GetAccounts()
+        {
+            return _context.Accounts.Select(x => new AccountViewModel
+            {
+                Id = x.Id,
+                Fullname = x.Fullname
+            }).ToList();
+        }
     }
 }

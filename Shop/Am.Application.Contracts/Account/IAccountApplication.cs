@@ -11,6 +11,8 @@ namespace Am.Application.Contracts.Account
         EditAccount GetDetails(long id);
         OperationResult ChangePassword(ChangePassword command);
         OperationResult Login(Login command);
+        List<AccountViewModel> GetAccounts();
+
 
         void Logout();
 

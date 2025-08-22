@@ -209,3 +209,5 @@ E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\test.csht
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Pages\PaymentResult.cshtml.g.cs
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Sm.Acl.dll
 E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\bin\Debug\net5.0\Sm.Acl.pdb
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Orders\Index.cshtml.g.cs
+E:\1_PROJECTS\DotNetShop\Shop\ServiceHost\obj\Debug\net5.0\Razor\Areas\Administrator\Pages\Shop\Orders\Items.cshtml.g.cs

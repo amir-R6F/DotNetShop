@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using Microsoft.Extensions.Configuration;
 using Shop.Application;
@@ -64,6 +65,24 @@ namespace Sm.Application
         public double GetAmountBy(long id)
         {
             return _orderRepository.GetAmountBy(id);
+        }
+
+        public void Cancel(long id)
+        {
+            var order = _orderRepository.Get(id);
+            order.Cancel();
+            _orderRepository.SaveChanges();
+            
+        }
+
+        public List<OrderViewModel> Search(OrderSearchModel searchModel)
+        {
+            return _orderRepository.Search(searchModel);
+        }
+
+        public List<OrderItemViewModel> GetItems(long orderId)
+        {
+            return _orderRepository.GetItems(orderId);
         }
     }
 }

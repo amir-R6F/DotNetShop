@@ -43,7 +43,7 @@ namespace Sm.Domain.OrderAgg
             IssueTrackingNum = number;
         }
         
-        public void Cancel(string number)
+        public void Cancel()
         {
             IsCanceled = true;
         }

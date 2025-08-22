@@ -73,6 +73,11 @@ namespace Am.Application
 
         }
 
+        public List<AccountViewModel> GetAccounts()
+        {
+            return _accountRepository.GetAccounts();
+        }
+
         public void Logout()
         {
             _authHelper.SingOut();
